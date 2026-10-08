@@ -1,0 +1,1889 @@
+<!DOCTYPE html><html lang="en"><head><meta charset="utf-8"><meta content="width=device-width, initial-scale=1.0" name="viewport"><meta content="web_standard" name="shell-type"><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"><link href="https://fonts.googleapis.com" rel="preconnect"><link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..700;1,400..700&amp;family=Plus+Jakarta+Sans:wght@300;400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<meta name="description" content="SK Jewellers - BIS Hallmarked Gold & Silver Jewellery. 100% purity guaranteed. Explore gold investment packages, bridal collections & heritage craftsmanship.">
+<title>SK JEWELLERS | Suvarna Kala Maison — BIS Hallmarked Gold & Silver</title>
+<style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}
+html{scroll-behavior:smooth;}
+
+/* ===== GRAND CURTAIN INTRO ANIMATION (UPLIFTING THEATRE CURTAIN) ===== */
+#sk-intro-overlay{position:fixed;inset:0;z-index:99999;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden;pointer-events:all;transition:opacity 0.6s ease, visibility 0.6s ease;cursor:pointer;}
+#sk-intro-overlay.hidden-curtain{opacity:0!important;visibility:hidden!important;pointer-events:none!important;display:none!important;}
+#sk-intro-overlay .curtain-sheet{position:absolute;top:0;left:0;width:100%;height:100%;background:radial-gradient(ellipse at 50% 40%,#201c18 0%,#141210 65%,#0a0908 100%);z-index:1;transition:transform 1.4s cubic-bezier(0.77,0,0.175,1);will-change:transform;border-bottom:2px solid rgba(236,192,114,0.65);box-shadow:0 25px 60px rgba(0,0,0,0.95),0 0 25px rgba(236,192,114,0.2);}
+#sk-intro-overlay.reveal .curtain-sheet{transform:translateY(-102%);}
+#sk-intro-overlay .intro-content{position:relative;z-index:3;text-align:center;max-width:580px;padding:2.5rem 1.5rem;opacity:0;transform:translateY(25px);animation:introFadeIn 1s 0.2s cubic-bezier(0.16,1,0.3,1) forwards;transition:opacity 0.6s ease,transform 0.6s ease;}
+#sk-intro-overlay.reveal .intro-content{opacity:0;transform:translateY(-60px);pointer-events:none;}
+@keyframes introFadeIn{to{opacity:1;transform:translateY(0);}}
+
+#sk-intro-overlay .intro-emblem{position:relative;width:96px;height:96px;margin:0 auto 1.5rem;display:flex;align-items:center;justify-content:center;}
+#sk-intro-overlay .intro-ring{position:absolute;inset:0;border-radius:50%;border:1px dashed rgba(236,192,114,0.5);animation:spinSlow 20s linear infinite;}
+#sk-intro-overlay .intro-ring-inner{position:absolute;inset:6px;border-radius:50%;border:1.5px solid rgba(236,192,114,0.8);box-shadow:0 0 25px rgba(236,192,114,0.25);}
+#sk-intro-overlay .intro-emblem img{position:relative;z-index:2;width:60px;height:60px;object-fit:contain;filter:brightness(12);}
+@keyframes spinSlow{100%{transform:rotate(360deg);}}
+
+#sk-intro-overlay .intro-title{font-family:'Playfair Display',serif;font-size:clamp(30px,5vw,54px);background:linear-gradient(135deg,#fff 0%,#ecc072 50%,#f5d38a 100%);-webkit-background-clip:text;-webkit-text-fill-color:transparent;letter-spacing:0.12em;text-transform:uppercase;line-height:1.15;margin-bottom:0.5rem;font-weight:600;}
+#sk-intro-overlay .intro-subtitle{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(11px,1.4vw,13px);color:#ecc072;letter-spacing:0.32em;text-transform:uppercase;font-weight:600;}
+#sk-intro-overlay .intro-line-wrap{display:flex;align-items:center;justify-content:center;gap:12px;margin:1.4rem auto;max-width:240px;}
+#sk-intro-overlay .intro-line{flex:1;height:1px;background:linear-gradient(90deg,transparent,#ecc072,transparent);}
+#sk-intro-overlay .intro-diamond{color:#ecc072;font-size:10px;}
+#sk-intro-overlay .intro-tagline{font-family:'Plus Jakarta Sans',sans-serif;font-size:clamp(12px,1.3vw,15px);color:rgba(254,248,243,0.75);letter-spacing:0.04em;font-style:italic;}
+
+/* Intro Progress Bar & Action */
+#sk-intro-overlay .intro-progress-container{width:160px;height:2px;background:rgba(255,255,255,0.1);margin:1.75rem auto 1.25rem;border-radius:2px;overflow:hidden;}
+#sk-intro-overlay .intro-progress-bar{width:0;height:100%;background:linear-gradient(90deg,#ecc072,#ffd580);animation:fillProgress 2.2s linear forwards;}
+@keyframes fillProgress{to{width:100%;}}
+
+#sk-intro-overlay .intro-btn{margin-top:0.5rem;padding:0.75rem 2rem;border:1px solid rgba(236,192,114,0.6);background:rgba(236,192,114,0.08);color:#ecc072;font-family:'Plus Jakarta Sans',sans-serif;font-size:11px;font-weight:600;letter-spacing:0.2em;text-transform:uppercase;border-radius:9999px;transition:all 0.3s ease;cursor:pointer;}
+#sk-intro-overlay .intro-btn:hover{background:#ecc072;color:#1d1b19;transform:scale(1.04);box-shadow:0 0 25px rgba(236,192,114,0.4);}
+#sk-intro-overlay .intro-skip{margin-top:1rem;color:rgba(254,248,243,0.4);font-size:11px;letter-spacing:0.1em;text-decoration:none;transition:color 0.2s;}
+#sk-intro-overlay .intro-skip:hover{color:#ecc072;}
+
+/* Gold Particles */
+#sk-intro-overlay .gold-particles{position:absolute;inset:0;z-index:2;overflow:hidden;pointer-events:none;}
+.gold-sparkle{position:absolute;background:radial-gradient(circle,#fff 10%,#ecc072 70%);border-radius:50%;opacity:0;animation:floatSparkle 3s infinite ease-in-out;}
+@keyframes floatSparkle{0%{opacity:0;transform:translateY(100vh) scale(0);}50%{opacity:0.9;}100%{opacity:0;transform:translateY(-15vh) scale(1.2);}}
+
+/* ===== SCROLL REVEAL ===== */
+.scroll-reveal{opacity:0;transform:translateY(35px);transition:opacity 0.8s ease-out,transform 0.8s ease-out;}
+.scroll-reveal.revealed{opacity:1;transform:translateY(0);}
+.scroll-reveal-left{opacity:0;transform:translateX(-35px);transition:opacity 0.8s ease-out,transform 0.8s ease-out;}
+.scroll-reveal-left.revealed{opacity:1;transform:translateX(0);}
+.scroll-reveal-right{opacity:0;transform:translateX(35px);transition:opacity 0.8s ease-out,transform 0.8s ease-out;}
+.scroll-reveal-right.revealed{opacity:1;transform:translateX(0);}
+
+/* ===== MOBILE MENU ===== */
+#mobile-menu-overlay{position:fixed;inset:0;background:rgba(0,0,0,0.65);z-index:998;opacity:0;pointer-events:none;transition:opacity 0.35s ease;backdrop-filter:blur(6px);}
+#mobile-menu-overlay.active{opacity:1;pointer-events:all;}
+#mobile-menu-drawer{position:fixed;top:0;right:0;width:min(340px,85vw);height:100%;background:#fef8f3;z-index:999;transform:translateX(100%);transition:transform 0.4s cubic-bezier(0.16,1,0.3,1);box-shadow:-10px 0 40px rgba(0,0,0,0.18);overflow-y:auto;}
+#mobile-menu-drawer.active{transform:translateX(0);}
+
+/* ===== FLOATING BUTTONS ===== */
+.floating-btn{position:fixed;z-index:90;width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;cursor:pointer;box-shadow:0 6px 22px rgba(0,0,0,0.18);transition:transform 0.3s cubic-bezier(0.34,1.56,0.64,1),opacity 0.3s ease,box-shadow 0.3s ease;transform:scale(0);opacity:0;}
+.floating-btn.visible{transform:scale(1);opacity:1;}
+.floating-btn:hover{transform:scale(1.1);box-shadow:0 8px 30px rgba(0,0,0,0.25);}
+#back-to-top{bottom:92px;right:22px;background:#1d1b19;color:#fef8f3;border:1px solid rgba(236,192,114,0.3);}
+#back-to-top:hover{background:#7a5913;color:#ffffff;}
+#whatsapp-btn{bottom:26px;right:22px;background:#25D366;color:white;}
+#whatsapp-btn::after{content:'';position:absolute;width:100%;height:100%;border-radius:50%;background:#25D366;z-index:-1;animation:whatsappPulse 2.2s infinite;}
+@keyframes whatsappPulse{0%{transform:scale(1);opacity:0.5;}100%{transform:scale(1.6);opacity:0;}}
+
+/* ===== MODALS ===== */
+.sk-modal-backdrop{position:fixed;inset:0;background:rgba(18,16,14,0.78);backdrop-filter:blur(8px);z-index:10000;display:flex;align-items:center;justify-content:center;padding:1.25rem;opacity:0;pointer-events:none;transition:opacity 0.35s ease;}
+.sk-modal-backdrop.active{opacity:1;pointer-events:all;}
+.sk-modal-card{background:#ffffff;border:1px solid rgba(122,89,19,0.2);box-shadow:0 25px 60px rgba(0,0,0,0.25);border-radius:0.5rem;max-height:90vh;overflow-y:auto;transform:translateY(20px) scale(0.97);transition:transform 0.35s cubic-bezier(0.16,1,0.3,1);}
+.sk-modal-backdrop.active .sk-modal-card{transform:translateY(0) scale(1);}
+
+/* ===== TOAST SYSTEM ===== */
+#toast-container{position:fixed;bottom:26px;left:24px;z-index:10001;display:flex;flex-direction:column;gap:10px;pointer-events:none;}
+.sk-toast{background:#1d1b19;color:#fef8f3;border-left:4px solid #ecc072;padding:12px 18px;border-radius:4px;box-shadow:0 8px 30px rgba(0,0,0,0.3);font-family:'Plus Jakarta Sans',sans-serif;font-size:13px;display:flex;align-items:center;gap:10px;pointer-events:all;transform:translateY(20px);opacity:0;animation:toastIn 0.35s cubic-bezier(0.16,1,0.3,1) forwards;max-width:380px;}
+@keyframes toastIn{to{transform:translateY(0);opacity:1;}}
+.sk-toast.toast-out{animation:toastOut 0.35s ease forwards;}
+@keyframes toastOut{to{transform:translateY(20px);opacity:0;}}
+
+/* ===== LIVE RATE TICKER ===== */
+.live-rate-bar{background:#181614;color:#fef8f3;border-bottom:1px solid rgba(236,192,114,0.18);}
+.pulse-green{display:inline-block;width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 10px #22c55e;animation:pulseBlink 1.8s infinite;}
+@keyframes pulseBlink{0%,100%{opacity:1;transform:scale(1);}50%{opacity:0.4;transform:scale(0.85);}}
+
+/* ===== ACTIVE NAV & SCROLL ===== */
+nav a.nav-active{color:#7a5913!important;font-weight:700!important;position:relative;}
+nav a.nav-active::after{content:'';position:absolute;bottom:-4px;left:0;right:0;height:2px;background:#7a5913;border-radius:2px;}
+header.scrolled{box-shadow:0 4px 25px rgba(0,0,0,0.08);background:rgba(254,248,243,0.98);}
+
+/* ===== ANIMATIONS ===== */
+@keyframes shimmer{0%{background-position:-200% 0;}100%{background-position:200% 0;}}
+.shimmer-gold{background:linear-gradient(90deg,transparent 30%,rgba(236,192,114,0.2) 50%,transparent 70%);background-size:200% 100%;animation:shimmer 3s infinite;}
+@keyframes pulseHighlight{0%,100%{outline:2px solid transparent;}50%{outline:2px solid #7a5913;}}
+.input-highlight{animation:pulseHighlight 1.5s ease 2;}
+</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { "colors": { "secondary-fixed-dim": "#ecc072", "on-surface-variant": "#4b4640", "on-secondary-fixed": "#271900", "tertiary": "#000000", "surface-tint": "#615e5b", "tertiary-container": "#281900", "on-error": "#ffffff", "outline": "#7d766f", "surface-container": "#f2ede8", "primary-fixed-dim": "#cbc5c2", "surface": "#fef8f3", "on-surface": "#1d1b19", "secondary": "#7a5913", "surface-bright": "#fef8f3", "error-container": "#ffdad6", "on-background": "#1d1b19", "surface-container-high": "#ece7e2", "on-error-container": "#93000a", "surface-container-lowest": "#ffffff", "outline-variant": "#cec5bd", "on-tertiary-fixed-variant": "#5e4106", "surface-dim": "#ded9d4", "on-primary": "#ffffff", "on-primary-fixed": "#1d1b19", "surface-container-low": "#f8f3ee", "background": "#fef8f3", "tertiary-fixed": "#ffdeac", "tertiary-fixed-dim": "#eac07b", "on-tertiary-fixed": "#281900", "surface-variant": "#e6e2dd", "on-tertiary": "#ffffff", "primary-fixed": "#e7e1de", "on-secondary-container": "#795712", "inverse-primary": "#cbc5c2", "on-tertiary-container": "#a27e40", "inverse-surface": "#32302d", "on-primary-container": "#878380", "on-primary-fixed-variant": "#494644", "secondary-fixed": "#ffdea9", "error": "#ba1a1a", "surface-container-highest": "#e6e2dd", "inverse-on-surface": "#f5f0eb", "secondary-container": "#fed080", "on-secondary-fixed-variant": "#5e4100", "primary": "#000000", "on-secondary": "#ffffff", "primary-container": "#1d1b19" }, "borderRadius": { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, "spacing": { "space-lg": "1.75rem", "gutter-desktop": "2.5rem", "margin": "1.5rem", "space-md": "1rem", "space-xl": "3rem", "space-xs": "0.25rem", "gutter": "1.5rem", "space-sm": "0.5rem", "margin-desktop": "4rem" }, "fontFamily": { "body-lg": [ "Plus Jakarta Sans" ], "headline-xl": [ "Playfair Display" ], "headline-md": [ "Playfair Display" ], "headline-xl-mobile": [ "Playfair Display" ], "label-button": [ "Plus Jakarta Sans" ], "display-hero": [ "Playfair Display" ], "headline-sm": [ "Playfair Display" ], "headline-lg": [ "Playfair Display" ], "body-md": [ "Plus Jakarta Sans" ], "body-sm": [ "Plus Jakarta Sans" ], "label-eyebrow": [ "Plus Jakarta Sans" ], "display-hero-mobile": [ "Playfair Display" ], "label-caption": [ "Plus Jakarta Sans" ] }, "fontSize": { "body-lg": [ "16px", { "lineHeight": "26px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "headline-xl": [ "40px", { "lineHeight": "48px", "letterSpacing": "0em", "fontWeight": "400" } ], "headline-md": [ "22px", { "lineHeight": "30px", "letterSpacing": "0.01em", "fontWeight": "500" } ], "headline-xl-mobile": [ "30px", { "lineHeight": "38px", "letterSpacing": "0em", "fontWeight": "400" } ], "label-button": [ "12px", { "lineHeight": "16px", "letterSpacing": "0.12em", "fontWeight": "600" } ], "display-hero": [ "56px", { "lineHeight": "64px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "headline-sm": [ "18px", { "lineHeight": "26px", "letterSpacing": "0.02em", "fontWeight": "600" } ], "headline-lg": [ "28px", { "lineHeight": "36px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-md": [ "14px", { "lineHeight": "22px", "letterSpacing": "0.01em", "fontWeight": "400" } ], "body-sm": [ "12px", { "lineHeight": "18px", "letterSpacing": "0.02em", "fontWeight": "400" } ], "label-eyebrow": [ "11px", { "lineHeight": "16px", "letterSpacing": "0.18em", "fontWeight": "600" } ], "display-hero-mobile": [ "38px", { "lineHeight": "46px", "letterSpacing": "-0.01em", "fontWeight": "400" } ], "label-caption": [ "10px", { "lineHeight": "14px", "letterSpacing": "0.08em", "fontWeight": "500" } ] } } } };</script><style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.inset-0{inset:0px}.-bottom-4{bottom:-1rem}.-bottom-6{bottom:-1.5rem}.-left-8{left:-2rem}.-right-4{right:-1rem}.bottom-6{bottom:1.5rem}.left-6{left:1.5rem}.right-6{right:1.5rem}.top-0{top:0px}.z-10{z-index:10}.z-50{z-index:50}.mx-auto{margin-left:auto;margin-right:auto}.my-space-sm{margin-top:0.5rem;margin-bottom:0.5rem}.mb-1{margin-bottom:0.25rem}.mb-2{margin-bottom:0.5rem}.mb-space-lg{margin-bottom:1.75rem}.mb-space-md{margin-bottom:1rem}.mb-space-sm{margin-bottom:0.5rem}.mb-space-xl{margin-bottom:3rem}.mb-space-xs{margin-bottom:0.25rem}.mt-0\.5{margin-top:0.125rem}.mt-1{margin-top:0.25rem}.mt-space-md{margin-top:1rem}.mt-space-sm{margin-top:0.5rem}.mt-space-xs{margin-top:0.25rem}.mt-space-xl{margin-top:3rem}.block{display:block}.flex{display:flex}.inline-flex{display:inline-flex}.grid{display:grid}.hidden{display:none}.aspect-\[3\/4\]{aspect-ratio:3/4}.aspect-\[4\/5\]{aspect-ratio:4/5}.aspect-square{aspect-ratio:1 / 1}.h-10{height:2.5rem}.h-12{height:3rem}.h-20{height:5rem}.h-24{height:6rem}.h-32{height:8rem}.h-8{height:2rem}.h-\[1px\]{height:1px}.h-full{height:100%}.w-10{width:2.5rem}.w-12{width:3rem}.w-24{width:6rem}.w-32{width:8rem}.w-44{width:11rem}.w-8{width:2rem}.w-auto{width:auto}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-\[1440px\]{max-width:1440px}.max-w-md{max-width:28rem}.max-w-xl{max-width:36rem}.shrink-0{flex-shrink:0}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.flex-col{flex-direction:column}.flex-wrap{flex-wrap:wrap}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.justify-around{justify-content:space-around}.gap-1{gap:0.25rem}.gap-2{gap:0.5rem}.gap-gutter{gap:1.5rem}.gap-gutter-desktop{gap:2.5rem}.gap-space-lg{gap:1.75rem}.gap-space-md{gap:1rem}.gap-space-sm{gap:0.5rem}.gap-space-xs{gap:0.25rem}.space-y-space-lg > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.75rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.75rem * var(--tw-space-y-reverse))}.space-y-space-md > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1rem * var(--tw-space-y-reverse))}.space-y-space-sm > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.space-y-space-xs > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.25rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.25rem * var(--tw-space-y-reverse))}.divide-y > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(1px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(1px * var(--tw-divide-y-reverse))}.divide-on-surface-variant\/30 > :not([hidden]) ~ :not([hidden]){border-color:rgb(75 70 64 / 0.3)}.overflow-hidden{overflow:hidden}.rounded{border-radius:0.25rem}.rounded-full{border-radius:9999px}.bg-primary{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.bg-primary-container{--tw-bg-opacity:1;background-color:rgb(29 27 25 / var(--tw-bg-opacity, 1))}.bg-secondary{--tw-bg-opacity:1;background-color:rgb(122 89 19 / var(--tw-bg-opacity, 1))}.bg-secondary\/10{background-color:rgb(122 89 19 / 0.1)}.bg-surface{--tw-bg-opacity:1;background-color:rgb(254 248 243 / var(--tw-bg-opacity, 1))}.bg-surface-bright{--tw-bg-opacity:1;background-color:rgb(254 248 243 / var(--tw-bg-opacity, 1))}.bg-surface-container{--tw-bg-opacity:1;background-color:rgb(242 237 232 / var(--tw-bg-opacity, 1))}.bg-surface-container-high{--tw-bg-opacity:1;background-color:rgb(236 231 226 / var(--tw-bg-opacity, 1))}.bg-surface-container-low{--tw-bg-opacity:1;background-color:rgb(248 243 238 / var(--tw-bg-opacity, 1))}.bg-surface-container-lowest{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-surface\/95{background-color:rgb(254 248 243 / 0.95)}.bg-transparent{background-color:transparent}.bg-gradient-to-t{background-image:linear-gradient(to top, var(--tw-gradient-stops))}.from-primary\/60{--tw-gradient-from:rgb(0 0 0 / 0.6) var(--tw-gradient-from-position);--tw-gradient-to:rgb(0 0 0 / 0) var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), var(--tw-gradient-to)}.via-transparent{--tw-gradient-to:rgb(0 0 0 / 0)  var(--tw-gradient-to-position);--tw-gradient-stops:var(--tw-gradient-from), transparent var(--tw-gradient-via-position), var(--tw-gradient-to)}.to-transparent{--tw-gradient-to:transparent var(--tw-gradient-to-position)}.object-contain{object-fit:contain}.object-cover{object-fit:cover}.object-center{object-position:center}.p-2{padding:0.5rem}.p-space-lg{padding:1.75rem}.p-space-md{padding:1rem}.p-space-sm{padding:0.5rem}.p-space-xl{padding:3rem}.p-1{padding:0.25rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-margin{padding-left:1.5rem;padding-right:1.5rem}.px-space-lg{padding-left:1.75rem;padding-right:1.75rem}.px-space-md{padding-left:1rem;padding-right:1rem}.px-space-xl{padding-left:3rem;padding-right:3rem}.py-0\.5{padding-top:0.125rem;padding-bottom:0.125rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-2\.5{padding-top:0.625rem;padding-bottom:0.625rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.py-3\.5{padding-top:0.875rem;padding-bottom:0.875rem}.py-space-sm{padding-top:0.5rem;padding-bottom:0.5rem}.py-space-xl{padding-top:3rem;padding-bottom:3rem}.px-space-sm{padding-left:0.5rem;padding-right:0.5rem}.py-space-md{padding-top:1rem;padding-bottom:1rem}.py-space-xs{padding-top:0.25rem;padding-bottom:0.25rem}.pb-space-md{padding-bottom:1rem}.pt-28{padding-top:7rem}.pt-space-lg{padding-top:1.75rem}.pt-space-md{padding-top:1rem}.pt-space-xs{padding-top:0.25rem}.pb-margin-desktop{padding-bottom:4rem}.pt-space-xl{padding-top:3rem}.text-center{text-align:center}.text-right{text-align:right}.font-body-lg{font-family:Plus Jakarta Sans}.font-body-md{font-family:Plus Jakarta Sans}.font-body-sm{font-family:Plus Jakarta Sans}.font-display-hero{font-family:Playfair Display}.font-headline-lg{font-family:Playfair Display}.font-headline-md{font-family:Playfair Display}.font-headline-sm{font-family:Playfair Display}.font-headline-xl{font-family:Playfair Display}.font-label-button{font-family:Plus Jakarta Sans}.font-label-caption{font-family:Plus Jakarta Sans}.font-label-eyebrow{font-family:Plus Jakarta Sans}.font-serif{font-family:ui-serif, Georgia, Cambria, "Times New Roman", Times, serif}.text-\[14px\]{font-size:14px}.text-\[15px\]{font-size:15px}.text-\[16px\]{font-size:16px}.text-\[18px\]{font-size:18px}.text-\[20px\]{font-size:20px}.text-\[24px\]{font-size:24px}.text-body-lg{font-size:16px;line-height:26px;letter-spacing:0.01em;font-weight:400}.text-body-md{font-size:14px;line-height:22px;letter-spacing:0.01em;font-weight:400}.text-body-sm{font-size:12px;line-height:18px;letter-spacing:0.02em;font-weight:400}.text-display-hero{font-size:56px;line-height:64px;letter-spacing:-0.01em;font-weight:400}.text-headline-lg{font-size:28px;line-height:36px;letter-spacing:0.01em;font-weight:400}.text-headline-md{font-size:22px;line-height:30px;letter-spacing:0.01em;font-weight:500}.text-headline-sm{font-size:18px;line-height:26px;letter-spacing:0.02em;font-weight:600}.text-headline-xl{font-size:40px;line-height:48px;letter-spacing:0em;font-weight:400}.text-label-button{font-size:12px;line-height:16px;letter-spacing:0.12em;font-weight:600}.text-label-caption{font-size:10px;line-height:14px;letter-spacing:0.08em;font-weight:500}.text-label-eyebrow{font-size:11px;line-height:16px;letter-spacing:0.18em;font-weight:600}.font-bold{font-weight:700}.font-light{font-weight:300}.font-medium{font-weight:500}.font-normal{font-weight:400}.font-semibold{font-weight:600}.uppercase{text-transform:uppercase}.italic{font-style:italic}.leading-\[1\.08\]{line-height:1.08}.leading-none{line-height:1}.leading-relaxed{line-height:1.625}.leading-snug{line-height:1.375}.leading-tight{line-height:1.25}.tracking-\[0\.14em\]{letter-spacing:0.14em}.tracking-\[0\.16em\]{letter-spacing:0.16em}.tracking-\[0\.25em\]{letter-spacing:0.25em}.tracking-\[0\.2em\]{letter-spacing:0.2em}.tracking-tight{letter-spacing:-0.025em}.tracking-wider{letter-spacing:0.05em}.tracking-widest{letter-spacing:0.1em}.text-on-primary{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-on-surface{--tw-text-opacity:1;color:rgb(29 27 25 / var(--tw-text-opacity, 1))}.text-on-surface-variant{--tw-text-opacity:1;color:rgb(75 70 64 / var(--tw-text-opacity, 1))}.text-secondary{--tw-text-opacity:1;color:rgb(122 89 19 / var(--tw-text-opacity, 1))}.text-secondary-container{--tw-text-opacity:1;color:rgb(254 208 128 / var(--tw-text-opacity, 1))}.text-secondary\/30{color:rgb(122 89 19 / 0.3)}.text-surface{--tw-text-opacity:1;color:rgb(254 248 243 / var(--tw-text-opacity, 1))}.text-surface-bright{--tw-text-opacity:1;color:rgb(254 248 243 / var(--tw-text-opacity, 1))}.text-surface-container-high{--tw-text-opacity:1;color:rgb(236 231 226 / var(--tw-text-opacity, 1))}.text-surface-variant{--tw-text-opacity:1;color:rgb(230 226 221 / var(--tw-text-opacity, 1))}.text-outline{--tw-text-opacity:1;color:rgb(125 118 111 / var(--tw-text-opacity, 1))}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}.opacity-15{opacity:0.15}.opacity-20{opacity:0.2}.shadow-\[0_1px_8px_rgba\(0\2c 0\2c 0\2c 0\.03\)\]{--tw-shadow:0 1px 8px rgba(0,0,0,0.03);--tw-shadow-colored:0 1px 8px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-sm{--tw-shadow:0 1px 2px 0 rgb(0 0 0 / 0.05);--tw-shadow-colored:0 1px 2px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-\[0_-1px_0_rgba\(0\2c 0\2c 0\2c 0\.04\)\]{--tw-shadow:0 -1px 0 rgba(0,0,0,0.04);--tw-shadow-colored:0 -1px 0 var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.saturate-\[0\.95\]{--tw-saturate:saturate(0.95);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.saturate-\[0\.9\]{--tw-saturate:saturate(0.9);filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.filter{filter:var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow)}.backdrop-blur-md{--tw-backdrop-blur:blur(12px);-webkit-backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia);backdrop-filter:var(--tw-backdrop-blur) var(--tw-backdrop-brightness) var(--tw-backdrop-contrast) var(--tw-backdrop-grayscale) var(--tw-backdrop-hue-rotate) var(--tw-backdrop-invert) var(--tw-backdrop-opacity) var(--tw-backdrop-saturate) var(--tw-backdrop-sepia)}.transition-all{transition-property:all;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-colors{transition-property:color, background-color, border-color, fill, stroke, -webkit-text-decoration-color;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, -webkit-text-decoration-color;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-opacity{transition-property:opacity;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-shadow{transition-property:box-shadow;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.transition-transform{transition-property:transform;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.placeholder\:text-outline-variant::placeholder{--tw-text-opacity:1;color:rgb(206 197 189 / var(--tw-text-opacity, 1))}.hover\:bg-on-surface-variant:hover{--tw-bg-opacity:1;background-color:rgb(75 70 64 / var(--tw-bg-opacity, 1))}.hover\:bg-primary:hover{--tw-bg-opacity:1;background-color:rgb(0 0 0 / var(--tw-bg-opacity, 1))}.hover\:bg-surface-container:hover{--tw-bg-opacity:1;background-color:rgb(242 237 232 / var(--tw-bg-opacity, 1))}.hover\:bg-surface-container-high:hover{--tw-bg-opacity:1;background-color:rgb(236 231 226 / var(--tw-bg-opacity, 1))}.hover\:text-on-primary:hover{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.hover\:text-on-surface:hover{--tw-text-opacity:1;color:rgb(29 27 25 / var(--tw-text-opacity, 1))}.hover\:text-surface:hover{--tw-text-opacity:1;color:rgb(254 248 243 / var(--tw-text-opacity, 1))}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-md:hover{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}.group:hover .group-hover\:scale-105{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.group:hover .group-hover\:text-on-surface{--tw-text-opacity:1;color:rgb(29 27 25 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-secondary{--tw-text-opacity:1;color:rgb(122 89 19 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:text-surface{--tw-text-opacity:1;color:rgb(254 248 243 / var(--tw-text-opacity, 1))}.group:hover .group-hover\:opacity-25{opacity:0.25}.group:hover .group-hover\:opacity-30{opacity:0.3}@media (min-width: 640px){.sm\:block{display:block}.sm\:inline-flex{display:inline-flex}.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.sm\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}}@media (min-width: 768px){.md\:mx-0{margin-left:0px;margin-right:0px}.md\:inline-block{display:inline-block}.md\:inline-flex{display:inline-flex}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:items-end{align-items:flex-end}.md\:divide-x > :not([hidden]) ~ :not([hidden]){--tw-divide-x-reverse:0;border-right-width:calc(1px * var(--tw-divide-x-reverse));border-left-width:calc(1px * calc(1 - var(--tw-divide-x-reverse)))}.md\:divide-y-0 > :not([hidden]) ~ :not([hidden]){--tw-divide-y-reverse:0;border-top-width:calc(0px * calc(1 - var(--tw-divide-y-reverse)));border-bottom-width:calc(0px * var(--tw-divide-y-reverse))}}@media (min-width: 1024px){.lg\:col-span-5{grid-column:span 5 / span 5}.lg\:col-span-6{grid-column:span 6 / span 6}.lg\:col-span-7{grid-column:span 7 / span 7}.lg\:inline-flex{display:inline-flex}.lg\:grid-cols-12{grid-template-columns:repeat(12, minmax(0, 1fr))}.lg\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.lg\:grid-cols-6{grid-template-columns:repeat(6, minmax(0, 1fr))}.lg\:p-space-xl{padding:3rem}.lg\:px-margin-desktop{padding-left:4rem;padding-right:4rem}.lg\:py-space-xl{padding-top:3rem;padding-bottom:3rem}.lg\:pl-space-md{padding-left:1rem}}@media (min-width: 1280px){.xl\:flex{display:flex}}</style></head><body class="bg-surface font-body-md text-body-md text-on-surface antialiased" data-mode="connect">
+
+<!-- ===== GRAND CURTAIN INTRO OVERLAY ===== -->
+<div id="sk-intro-overlay" onclick="openCurtain()" role="dialog" aria-modal="true" aria-label="Welcome to SK Jewellers">
+  <div class="gold-particles" id="gold-particles"></div>
+  <div class="curtain-sheet"></div>
+  <div class="intro-content" onclick="event.stopPropagation()">
+    <div class="intro-emblem">
+      <div class="intro-ring"></div>
+      <div class="intro-ring-inner"></div>
+      <img alt="SK Jewellers Logo" src="https://lh3.googleusercontent.com/aida/AEtjO1WH1b-JfBGp4RnmeDGCxYma1PvWI4QfOGcLCXlh4NRU2rUhzSb4fkfO3KhPguRz_lBpjT-_8oQ8fUwZMzSIJ5on9_WlOZi_4FbuSSLKqYgpJ3luldx31gGXYv3lxU0W6oTaDmFYCh7jbpovHPiSmGsXSoXGUwUcIcDfJfI9C9YcPZ9_3pEnvIE6gdnRMS78wKg8NZeia0rsv_feBgLVjJ5O0zDNxaXd-prb3Wqxc6WRqQ">
+    </div>
+    <span class="inline-block px-3 py-1 mb-2 bg-[#ecc072]/10 border border-[#ecc072]/30 rounded-full font-label-caption text-[10px] tracking-[0.25em] text-[#ecc072] uppercase font-semibold">BIS 916 &amp; 999.9 Accredited Atelier</span>
+    <h1 class="intro-title">SK Jewellers</h1>
+    <p class="intro-subtitle">Suvarna Kala Maison</p>
+    <div class="intro-line-wrap">
+      <div class="intro-line"></div>
+      <span class="intro-diamond">✦</span>
+      <div class="intro-line"></div>
+    </div>
+    <p class="intro-tagline">Where tradition meets timeless gold &amp; generational trust</p>
+    
+    <div class="intro-progress-container">
+      <div class="intro-progress-bar"></div>
+    </div>
+    
+    <div class="flex flex-col items-center gap-2">
+      <button class="intro-btn" onclick="openCurtain(event)" id="enter-atelier-btn">
+        <span>✦ Enter Atelier ✦</span>
+      </button>
+      <button class="intro-skip cursor-pointer bg-transparent border-0" onclick="openCurtain(event)">
+        Click anywhere or tap to continue
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== MOBILE MENU ===== -->
+<div id="mobile-menu-overlay" onclick="closeMobileMenu()"></div>
+<div id="mobile-menu-drawer">
+  <div class="p-space-lg">
+    <div class="flex items-center justify-between mb-space-xl">
+      <div class="flex items-center gap-space-sm">
+        <img alt="SK" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WH1b-JfBGp4RnmeDGCxYma1PvWI4QfOGcLCXlh4NRU2rUhzSb4fkfO3KhPguRz_lBpjT-_8oQ8fUwZMzSIJ5on9_WlOZi_4FbuSSLKqYgpJ3luldx31gGXYv3lxU0W6oTaDmFYCh7jbpovHPiSmGsXSoXGUwUcIcDfJfI9C9YcPZ9_3pEnvIE6gdnRMS78wKg8NZeia0rsv_feBgLVjJ5O0zDNxaXd-prb3Wqxc6WRqQ">
+        <span class="font-headline-sm text-headline-sm uppercase text-on-surface">SK Jewellers</span>
+      </div>
+      <button onclick="closeMobileMenu()" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors cursor-pointer" id="mobile-menu-close-btn" aria-label="Close menu">
+        <span class="material-symbols-outlined text-on-surface text-[20px]">close</span>
+      </button>
+    </div>
+    <nav class="flex flex-col gap-space-xs">
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#hero-section" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">home</span> Home
+      </a>
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#about-section" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">info</span> About
+      </a>
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#collections-section" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">diamond</span> Collections
+      </a>
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#investment-schemes" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">savings</span> Packages & Schemes
+      </a>
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#craftsmanship-section" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">handyman</span> Craftsmanship
+      </a>
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#values-section" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">verified</span> Our Values
+      </a>
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#mission-section" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">flag</span> Mission & Vision
+      </a>
+      <a class="mobile-nav-link py-3 px-space-md text-on-surface font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container rounded transition-colors flex items-center gap-space-sm" href="#appointment-concierge" onclick="closeMobileMenu()">
+        <span class="material-symbols-outlined text-secondary text-[18px]">mail</span> Contact
+      </a>
+    </nav>
+    <div class="mt-space-xl pt-space-lg" style="border-top:1px solid rgba(75,70,64,0.15);">
+      <a class="w-full py-3.5 bg-primary text-on-primary font-label-button text-label-button uppercase tracking-wider text-center block hover:bg-on-surface-variant transition-colors" href="#appointment-concierge" onclick="closeMobileMenu()">Book Appointment</a>
+      <div class="mt-space-md flex items-center gap-space-sm text-on-surface-variant">
+        <span class="material-symbols-outlined text-secondary text-[18px]">call</span>
+        <a href="tel:+918103511405" class="font-body-sm text-body-sm hover:text-on-surface transition-colors">+91 8103511405</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<header class="fixed top-0 w-full z-50 bg-surface/95 backdrop-blur-md shadow-[0_1px_8px_rgba(0,0,0,0.03)]"><div class="bg-primary text-on-primary py-2 px-margin text-center overflow-hidden"><p class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-surface-container-high">BIS Hallmarked Purity • 999.9 Fine Gold Standard • Insured Pan-India Delivery • Schedule a Private Consultation</p></div><div class="h-20 max-w-[1440px] mx-auto px-margin lg:px-margin-desktop flex items-center justify-between"><div class="flex items-center gap-space-md"><img alt="SK JEWELLERS" class="h-8 w-auto object-contain cursor-pointer" onclick="scrollToTop()" src="https://lh3.googleusercontent.com/aida/AEtjO1WH1b-JfBGp4RnmeDGCxYma1PvWI4QfOGcLCXlh4NRU2rUhzSb4fkfO3KhPguRz_lBpjT-_8oQ8fUwZMzSIJ5on9_WlOZi_4FbuSSLKqYgpJ3luldx31gGXYv3lxU0W6oTaDmFYCh7jbpovHPiSmGsXSoXGUwUcIcDfJfI9C9YcPZ9_3pEnvIE6gdnRMS78wKg8NZeia0rsv_feBgLVjJ5O0zDNxaXd-prb3Wqxc6WRqQ"><a class="flex flex-col" data-path="home" href="#hero-section"><span class="font-headline-md text-headline-md tracking-wider uppercase text-on-surface leading-none">SK JEWELLERS</span><span class="font-label-caption text-label-caption uppercase tracking-[0.2em] text-secondary">Suvarna Kala Maison</span></a></div><nav class="hidden xl:flex items-center gap-space-lg" id="desktop-nav"><a class="desktop-nav-link font-label-button text-label-button uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#about-section">About</a><a class="desktop-nav-link font-label-button text-label-button uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#investment-schemes">Our Packages &amp; Schemes</a><a class="desktop-nav-link font-label-button text-label-button uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#craftsmanship-section">Craftsmanship</a><a class="desktop-nav-link font-label-button text-label-button uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#values-section">Our Values</a><a class="desktop-nav-link font-label-button text-label-button uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#mission-section">Mission &amp; Vision</a><a class="desktop-nav-link font-label-button text-label-button uppercase text-on-surface-variant hover:text-on-surface transition-colors" href="#appointment-concierge">Contact</a></nav><div class="flex items-center gap-space-md"><a class="hidden sm:inline-flex px-space-md py-space-sm bg-primary text-on-primary font-label-button text-label-button uppercase tracking-wider hover:bg-on-surface-variant hover:text-surface transition-all cursor-pointer" href="#appointment-concierge" onclick="bookAppointmentHelper('General Consultation')">Book Appointment</a><button class="hidden md:inline-flex font-label-button text-label-button uppercase text-on-surface-variant hover:text-secondary transition-colors bg-transparent border-0 cursor-pointer" onclick="openPortalModal()">Login / Portal</button><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center cursor-pointer hover:bg-secondary transition-colors" id="profile-icon-btn" onclick="openPortalModal()" title="Client Portal" aria-label="Open client portal"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div>
+<button onclick="openMobileMenu()" class="xl:hidden w-10 h-10 flex items-center justify-center rounded hover:bg-surface-container transition-colors cursor-pointer" id="hamburger-btn" aria-label="Open menu">
+  <span class="material-symbols-outlined text-on-surface text-[24px]">menu</span>
+</button>
+</div></div></header><main class="w-full pt-28 bg-surface"><div class="flex flex-col w-full">
+<!-- Top Bar Announcement Ribbon -->
+<div class="w-full bg-surface-container-high py-2.5 px-margin lg:px-margin-desktop text-center">
+<div class="max-w-[1440px] mx-auto flex items-center justify-between">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] text-secondary hidden md:inline-block">Suvarna Kala Jewellers Pvt Ltd • Est. In Trust</span>
+<p class="font-label-caption text-label-caption uppercase tracking-[0.16em] text-on-surface mx-auto md:mx-0 flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-[16px] text-secondary">verified</span>
+<span class="">Complimentary insured transit on all orders • 100% BIS Hallmarked Purity Guarantee</span>
+</p>
+<a class="font-label-button text-label-button uppercase text-secondary hover:text-on-surface transition-colors hidden lg:inline-flex items-center gap-1" href="#appointment-concierge">
+<span>Atelier Visit</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</a>
+</div>
+</div>
+<!-- Live Gold & Bullion Rates Ticker Bar -->
+<div class="w-full live-rate-bar py-2 px-margin lg:px-margin-desktop text-xs">
+<div class="max-w-[1440px] mx-auto flex flex-wrap items-center justify-between gap-3">
+<div class="flex items-center gap-2">
+<span class="pulse-green"></span>
+<span class="font-label-eyebrow text-[11px] uppercase tracking-[0.2em] text-[#ecc072] font-semibold">Live Bullion Rates • Morena Atelier</span>
+</div>
+<div class="flex items-center gap-4 sm:gap-6 font-body-sm text-[12px] overflow-x-auto py-0.5">
+<div class="flex items-center gap-1.5 whitespace-nowrap">
+<span class="text-[#ecc072] font-semibold">24K Fine Gold:</span>
+<span class="font-medium text-white">₹7,690 / g</span>
+<span class="text-emerald-400 text-[11px] font-semibold">▲ +₹25</span>
+</div>
+<div class="flex items-center gap-1.5 whitespace-nowrap">
+<span class="text-[#ecc072] font-semibold">22K (916 BIS):</span>
+<span class="font-medium text-white">₹7,050 / g</span>
+<span class="text-emerald-400 text-[11px] font-semibold">▲ +₹20</span>
+</div>
+<div class="flex items-center gap-1.5 whitespace-nowrap">
+<span class="text-[#ecc072] font-semibold">18K Atelier:</span>
+<span class="font-medium text-white">₹5,770 / g</span>
+</div>
+<div class="flex items-center gap-1.5 whitespace-nowrap">
+<span class="text-[#ecc072] font-semibold">Pure Silver (999):</span>
+<span class="font-medium text-white">₹92.50 / g</span>
+<span class="text-emerald-400 text-[11px] font-semibold">▲ +₹0.80</span>
+</div>
+</div>
+<div class="hidden md:flex items-center gap-2">
+<button onclick="scrollToCalculator()" class="text-[11px] uppercase tracking-wider text-[#ecc072] hover:text-white transition-colors bg-transparent border-0 cursor-pointer flex items-center gap-1 font-semibold">
+<span>Calculate Scheme Returns</span>
+<span class="material-symbols-outlined text-[14px]">calculate</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Hero Section: Editorial High-Fashion Split -->
+<section class="w-full bg-surface-bright py-space-xl lg:py-space-xl" id="hero-section">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Left Editorial Typography Column -->
+<div class="lg:col-span-6 flex flex-col justify-center space-y-space-lg scroll-reveal">
+<div class="inline-flex items-center gap-space-xs">
+<span class="w-8 h-[1px] bg-secondary"></span>
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.25em] text-secondary font-semibold">Est. in Trust • Crafted in Gold</span>
+</div>
+<div class="space-y-space-sm">
+<h1 class="font-display-hero text-display-hero text-on-surface leading-[1.08] tracking-tight">
+              Where tradition meets <span class="italic font-normal font-headline-xl text-secondary">timeless gold.</span>
+</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl pt-space-xs leading-relaxed">
+              A house built on purity, transparency, and the quiet confidence of owning genuine gold and silver — masterfully crafted for the moments a family remembers forever.
+            </p>
+</div>
+<!-- CTAs -->
+<div class="flex flex-wrap items-center gap-space-md pt-space-xs">
+<a class="px-space-lg py-3.5 bg-primary text-on-primary font-label-button text-label-button uppercase tracking-[0.14em] shadow-sm hover:bg-on-surface-variant hover:text-surface transition-all inline-flex items-center gap-2 shimmer-gold" href="#investment-schemes">
+<span>Explore Gold Packages</span>
+<span class="material-symbols-outlined text-[15px]">east</span>
+</a>
+<a class="px-space-lg py-3.5 bg-surface-container text-on-surface font-label-button text-label-button uppercase tracking-[0.14em] hover:bg-surface-container-high transition-all inline-flex items-center gap-2" href="#appointment-concierge">
+<span class="">Book Consultation</span>
+</a>
+</div>
+<!-- Hero Hallmark & Provenance Micro-Bar -->
+<div class="pt-space-md grid grid-cols-3 gap-space-sm bg-surface-container-low p-space-md rounded-DEFAULT">
+<div class="flex flex-col">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-semibold">BIS 916</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">100% Hallmarked</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Govt. Verified Purity</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-semibold">999.9 FINE</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Investment Grade</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Certified Bullion</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-semibold">GENERATIONAL</span>
+<span class="font-body-sm text-body-sm text-on-surface font-medium">Honest Dealing</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Families Across India</span>
+</div>
+</div>
+</div>
+<!-- Right Visual Mosaic Column -->
+<div class="lg:col-span-6 relative scroll-reveal-right">
+<div class="relative bg-surface-container-low p-space-md rounded-DEFAULT shadow-sm">
+<div class="aspect-[4/5] w-full overflow-hidden relative">
+<img class="w-full h-full object-cover object-center filter saturate-[0.95]" data-alt="High-fashion studio photograph of an Indian bride wearing an exquisite 22-karat BIS hallmarked handcrafted gold temple necklace, subtle solitaire pendant, and heritage filigree earrings, soft natural window light, warm ivory and antique brass tones, museum luxury editorial." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCJP9pvVw_MCSP-734EeSGenC70AJMjS2BW06gV6te9WjdAXWE2sUF10knAjMm4ZgHXsXYOUPitFJ1Q_UAuBuf7guJ1eCeBhQFU1E3bydcI4pZnwxI19JFjCM1KtR8_oEIjtjHNd8I-sA2w7LJC3fsQ8QIiUSUt30grhNe_H6VmTozUWXnmSIujoP5-R0M87eCsq6hOLS6L7oKoENgyuYM_DQoajvuynOh8VQ39ZDNj">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent"></div>
+<!-- Floating Editorial Badge -->
+<div class="absolute bottom-6 left-6 right-6 p-space-md bg-surface/95 backdrop-blur-md shadow-md flex items-center justify-between">
+<div>
+<p class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary">Signature Atelier Vault</p>
+<p class="font-headline-sm text-headline-sm text-on-surface">Royal Suvarna Heritage Choker</p>
+</div>
+<div class="text-right">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant block">Certified Purity</span>
+<span class="font-label-button text-label-button font-bold text-on-surface">22K / 916 BIS</span>
+</div>
+</div>
+</div>
+<!-- Overlapping Arch Card -->
+<div class="hidden sm:block absolute -bottom-6 -left-8 w-44 bg-surface-container-lowest p-space-sm shadow-md rounded-DEFAULT">
+<div class="aspect-square w-full overflow-hidden mb-2">
+<img class="w-full h-full object-cover" data-alt="Close up photograph of master goldsmith tweezers holding a flawless radiant diamond solitaire and 24k gold bullion ingot, macro studio lighting, warm champagne tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDgMb8B4IqVPJ9zR-IiaWaCUDAMwvlr9D532tPwJ2lXseJCDQHrYDbYnkdg9DrL1GUucLJOvl_xTFXsN-BRXXMHGy3GbIvaawNy_cvnflJBJn0jzbP1tEPQ4nf8aGw3z1uKw5AbeZtlFs2LrpQk_pCpe9KXegmz-yo-OoTWLIp1tkCn3opf6bFxonHWXXv4foKHpA_UllCSFuaEQMc_yjtvae6LCS6dpnRgqUXLACJY">
+</div>
+<p class="font-label-caption text-label-caption uppercase tracking-wider text-secondary font-semibold text-center">Bespoke Precision</p>
+<p class="font-body-sm text-body-sm text-on-surface text-center font-medium">Handcrafted in Morena</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Categories & Curated Vitrines (Inspired directly by the Reference Grid) -->
+<section class="w-full bg-surface py-space-xl" id="collections-section">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="flex flex-col md:flex-row md:items-end justify-between mb-space-lg gap-space-sm">
+<div class="">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] text-secondary font-semibold">The Art of Adornment</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Curated Collections</h2>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant max-w-md">
+          Explore artisanal categories handcrafted in 22k hallmark gold, pure silver bullion, and certified bridal sets.
+        </p>
+</div>
+<!-- Quick Nav Circle/Pill Showcase -->
+<div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-space-md mb-space-xl">
+<!-- Item 1 -->
+<button type="button" class="group flex flex-col items-center bg-surface-container-low p-space-md rounded-DEFAULT hover:bg-surface-container hover:shadow-sm transition-all text-center w-full cursor-pointer border-0" onclick="openCollectionModal('rings')">
+<div class="w-24 h-24 rounded-full overflow-hidden bg-surface-container-lowest p-2 shadow-sm mb-space-sm group-hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover rounded-full" data-alt="Pure yellow gold solitaire engagement ring with pristine diamond facet, top down editorial photography on cream textured fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbhboGsDKLihW1mqpJMAnFF_W3lCWQjgkRNReSA7LDBf-CBDLsVLwK-BLPwgjVNIBTxQnRGtR_GQj35CKvOgnBt77Bwk69JsEz_liDl5cLyFrqGxleP96fNhE1I-xMSR-2l1rIxEckZ8T3C_b4a4I05POPYKSSXsBYJBo7SPDL6otOlS7j0VmF3p8ZMxDxPW_PGHFvocySDHUJ7aO1za8qiqP6hPbEMF9bdROvQg61">
+</div>
+<span class="font-label-button text-label-button uppercase tracking-wider text-on-surface group-hover:text-secondary transition-colors text-center">Rings &amp; Solitaires</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-1">From ₹15,000 • View Details</span>
+</button>
+<!-- Item 2 -->
+<button type="button" class="group flex flex-col items-center bg-surface-container-low p-space-md rounded-DEFAULT hover:bg-surface-container hover:shadow-sm transition-all text-center w-full cursor-pointer border-0" onclick="openCollectionModal('necklaces')">
+<div class="w-24 h-24 rounded-full overflow-hidden bg-surface-container-lowest p-2 shadow-sm mb-space-sm group-hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover rounded-full" data-alt="Intricate Indian traditional gold necklace pendant with fine filigree work on warm neutral surface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDr09t05mvxqm8KgLhON_5izogU3DXxQwOgSGvHMI7IiaT8jimdMCleyzaYJsSLHtKj_ohJjFZRKtWWyHVmJwfd5UQzM9wkeDejV3AhmWTovTnxYiU1t3LssbREREf1FafvIaslH7k71nORAeGpDQtNLliM0s0Mjw1anuCjlo_WKRtykgYZSJf-eQRlWAhWw_fuLT_pawMIP4DWoE7TXxK0GPGEz_UnA-Vktziddtz2">
+</div>
+<span class="font-label-button text-label-button uppercase tracking-wider text-on-surface group-hover:text-secondary transition-colors text-center">Royal Necklaces</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-1">916 Hallmark • View Details</span>
+</button>
+<!-- Item 3 -->
+<button type="button" class="group flex flex-col items-center bg-surface-container-low p-space-md rounded-DEFAULT hover:bg-surface-container hover:shadow-sm transition-all text-center w-full cursor-pointer border-0" onclick="openCollectionModal('earrings')">
+<div class="w-24 h-24 rounded-full overflow-hidden bg-surface-container-lowest p-2 shadow-sm mb-space-sm group-hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover rounded-full" data-alt="Pair of heirloom south Indian jhumka gold earrings with pearls on silk linen background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBBOQL_BMC4iyUKu1IFLVqcYaCwZdfxrhFfWIbVeZqN8AmU3TXuOoQwnRwOEEHMSwg7G59fYa40GDk29jnKVXmGhs06FvpT7GYItQ_Y66qAFACRd77lTy7c5arwRQ3bSXwKBMgvY96FDgRvfEps66uHe4FUVKeHZL2PgsZq6X-S7sXEIxmmR3e0WSSDgSVcTW7cZQMkBOH_d47iVdsfNdEQ1acDbp7EsBtruxtrJkZh">
+</div>
+<span class="font-label-button text-label-button uppercase tracking-wider text-on-surface group-hover:text-secondary transition-colors text-center">Heritage Earrings</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-1">Handcrafted • View Details</span>
+</button>
+<!-- Item 4 -->
+<button type="button" class="group flex flex-col items-center bg-surface-container-low p-space-md rounded-DEFAULT hover:bg-surface-container hover:shadow-sm transition-all text-center w-full cursor-pointer border-0" onclick="openCollectionModal('bangles')">
+<div class="w-24 h-24 rounded-full overflow-hidden bg-surface-container-lowest p-2 shadow-sm mb-space-sm group-hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover rounded-full" data-alt="Traditional solid gold bangles kadas with embossed floral motifs on warm stone pedestal." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBdoKE-ZXKsuyuVpUWl8JexZIJrUpAWIF5I-cYYlfucUSSiVQIXOxG6h_Yc3rWD3PVZAQeF6wc6cBJhGBbizEeCaIr_aS1Sk9XuT5Ow285PwRnews3HwBfeAPk7VMYIZFV0NBeRzZTyzLJvt8s2pi1Q1CJ9SVBAHeqQhl9dBCy7IUs5iBOVXMoTQBHYWt8o_fKb258CCDEZf8U8tTVQ5nJwvTeNC9fhZ8VwUqKlUGH7">
+</div>
+<span class="font-label-button text-label-button uppercase tracking-wider text-on-surface group-hover:text-secondary transition-colors text-center">Bangles &amp; Kadas</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-1">Pure 22 Karat • View Details</span>
+</button>
+<!-- Item 5 -->
+<button type="button" class="group flex flex-col items-center bg-surface-container-low p-space-md rounded-DEFAULT hover:bg-surface-container hover:shadow-sm transition-all text-center w-full cursor-pointer border-0" onclick="openCollectionModal('bridal')">
+<div class="w-24 h-24 rounded-full overflow-hidden bg-surface-container-lowest p-2 shadow-sm mb-space-sm group-hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover rounded-full" data-alt="Complete bridal gold trousseau jewelry set with choker, earrings, maang tikka on heavy champagne velvet." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCKtpVwCDhtToX46qlRNZCpQ2MT8a3K8MStvOsfSxPiTu1GaGxflYr4ILx1dDh_Na8xxKPAtqH0UOOdR6QFFD_D-dpGGcj5A8_s6I1FCburyETSsslotZDd9_9o7RkLdb3Zxr40QcKfxTyp2cGwmxn--oNx2XyuVpiZW7JEwsFx8UsYt8IiWxha8iWehXD8rSeIvwGdU6uY31TfZUM9EGYCbqXxwsKnG8Eo27KW_aM">
+</div>
+<span class="font-label-button text-label-button uppercase tracking-wider text-on-surface group-hover:text-secondary transition-colors text-center">Bridal Vault</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-1">Custom Atelier • View Details</span>
+</button>
+<!-- Item 6 -->
+<button type="button" class="group flex flex-col items-center bg-surface-container-low p-space-md rounded-DEFAULT hover:bg-surface-container hover:shadow-sm transition-all text-center w-full cursor-pointer border-0" onclick="openCollectionModal('bullion')">
+<div class="w-24 h-24 rounded-full overflow-hidden bg-surface-container-lowest p-2 shadow-sm mb-space-sm group-hover:scale-105 transition-transform duration-300">
+<img class="w-full h-full object-cover rounded-full" data-alt="999.9 pure gold minted bullion coins and certified silver bars stacked on minimal marble plinth." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCPpDbC83bIWV7S0-jsqmxXr95cCg9dLeBfXTyT5yIaDfgSahLenHajPariaKtHbVO0gZ3iPMUTbdDHXAgIabI1my7a5HEQ2Hg6o1RorrVmQMkSzeN6kRjEC5F9wzkS8ZG43mZM3qE9aicKxUvXwB7l4e84GIRrjoABudIkUPHtMcTbO0_8wH1Nrn3TVnosznEdopSs1Iyg7x-cMZH1KM4IvEpnxiYjJirLPCWeIM9X">
+</div>
+<span class="font-label-button text-label-button uppercase tracking-wider text-on-surface group-hover:text-secondary transition-colors text-center">999.9 Bullion</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant mt-1">Investment Coins • View Details</span>
+</button>
+</div>
+<!-- Editorial Feature Banners (2x2 Asymmetric Mosaic) -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter">
+<div class="relative bg-surface-container p-space-lg rounded-DEFAULT flex flex-col justify-between overflow-hidden group cursor-pointer" onclick="openCollectionModal('heirlooms')">
+<div class="space-y-space-xs z-10">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-semibold">Heirloom Line</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Modern Heirlooms</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Timeless pieces for every generation of your family.</p>
+</div>
+<div class="pt-space-md z-10">
+<span class="font-label-button text-label-button uppercase tracking-wider text-secondary flex items-center gap-1 group-hover:text-on-surface transition-colors">
+<span>Explore Vault</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 opacity-20 group-hover:opacity-30 transition-opacity">
+<img class="w-full h-full object-cover rounded-full" data-alt="Gold filigree bangle texture close up detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCay9NN6G2Yg8gV7t6WbAcQ7aJ15dtNncePy-5RJ-XfbOnsyoq9wVvKM3mP7pamqA0jQHh8FXwT1EUsQ0uKIbJOCy8CIZ4GVZLutNstMhTWxoFYHzgvZzXOvm967zHLZNjTi3Ye0JDRpF1O2u-ljtUburoRb7MIvNFa9NlSasthdjOC13uyAOcFlt-ya9vO8rtbtm6adXAGV8JvVxznNKnxb6s3ov145rUz-2fDUWV_">
+</div>
+</div>
+<div class="relative bg-surface-container-high p-space-lg rounded-DEFAULT flex flex-col justify-between overflow-hidden group cursor-pointer" onclick="openCollectionModal('gemstones')">
+<div class="space-y-space-xs z-10">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-semibold">Gemstone Craft</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Color of Elegance</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Certified natural emerald, ruby, and navratna treasures.</p>
+</div>
+<div class="pt-space-md z-10">
+<span class="font-label-button text-label-button uppercase tracking-wider text-secondary flex items-center gap-1 group-hover:text-on-surface transition-colors">
+<span>View Gemstones</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 opacity-20 group-hover:opacity-30 transition-opacity">
+<img class="w-full h-full object-cover rounded-full" data-alt="Deep green certified emerald pendant set in 18k yellow gold." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDl_-xtLkuIMxA6cgiJ_jboL590Iror4fgvIrQCXOl0qO7SLUmEePgcHgGIx0tGyujxAAumCF7Z2Aump20D_pli_E1DqsdXDDdW8yrATQySpCsbU1ZK6zBNgV7gMxvi0Kt1vzQab_1tywLHrMOTpy1liF-I8YnNd8wpXgTPA_ezEK-CCXY_YtqtAGZ3peSWbt5BkVKyvkc_-1DLPPMvS9Ya5m-JMAQ1pUhDKYMlUlZ2">
+</div>
+</div>
+<div class="relative bg-surface-container p-space-lg rounded-DEFAULT flex flex-col justify-between overflow-hidden group cursor-pointer" onclick="openCollectionModal('daily')">
+<div class="space-y-space-xs z-10">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-semibold">Daily Luxury</span>
+<h3 class="font-headline-md text-headline-md text-on-surface">Everyday Essentials</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Refined, lightweight designs made for your daily glow.</p>
+</div>
+<div class="pt-space-md z-10">
+<span class="font-label-button text-label-button uppercase tracking-wider text-secondary flex items-center gap-1 group-hover:text-on-surface transition-colors">
+<span>Discover Now</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 opacity-20 group-hover:opacity-30 transition-opacity">
+<img class="w-full h-full object-cover rounded-full" data-alt="Delicate gold chain and diamond tennis bracelet lying across satin fabric." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDEk0n26nxdzuS7MOI8eMn1DYVLKw-sGRVHsOj9p8kt1z0rdpv6faSO2gLLwLg1aa07qDO2Jsa6M-92GeLoeDIHFafxJXv-4KYxZQy2Njpc5-ksZnGKDu8X0-4nlT28P-7_ijxrzRxyJNqBaP07uaarfCws6LTdp2PmnCAMh-c7eJ9ZIO-Y-N3EtfTeF8_dcGxKSikh-GvPYf3UBAK0O_OVgmeLqEbiFPFIz-IjG1vq">
+</div>
+</div>
+<div class="relative bg-primary-container text-on-primary p-space-lg rounded-DEFAULT flex flex-col justify-between overflow-hidden group cursor-pointer" onclick="bookAppointmentHelper('Bridal Custom Atelier')">
+<div class="space-y-space-xs z-10">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary-container font-semibold">Bridal Journey</span>
+<h3 class="font-headline-md text-headline-md text-surface-bright">Forever Begins Here</h3>
+<p class="font-body-sm text-body-sm text-surface-variant">Complete wedding trousseau jewelry customized for your story.</p>
+</div>
+<div class="pt-space-md z-10">
+<span class="font-label-button text-label-button uppercase tracking-wider text-secondary-container flex items-center gap-1 group-hover:text-surface transition-colors">
+<span>Book Bridal Atelier</span>
+<span class="material-symbols-outlined text-[16px]">arrow_forward</span>
+</span>
+</div>
+<div class="absolute -right-4 -bottom-4 w-32 h-32 opacity-15 group-hover:opacity-25 transition-opacity">
+<img class="w-full h-full object-cover rounded-full" data-alt="Graceful bride with gold maang tikka and veil in soft romantic shadow." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAazWA-VqZvFow6MyyFXfy0D-aushv73a1VcQJIUl4hj_vm-0VtrNFjc0ETT2vDn2uo3NSoPe-fbdFGOvnqJb83f4GA7ueGu69SutzDg0_mp9ih8JHopmlW7rkmYcMW0k1tu2CLqpZcSPnrC5wQ3aJr0qiMulSh_2-avDYJ5h_Vii4Dugmb4bAqVQnCAhylHztAAW2bffkYG-B1DlP4CQ9IpabPhhiL_e8ecI0jvGl">
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Curated Gold Investment Packages Section (Exact Verbatim Website Data) -->
+<section class="w-full bg-surface-container-low py-space-xl" id="investment-schemes">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<!-- Section Header -->
+<div class="text-center max-w-2xl mx-auto mb-space-xl space-y-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.25em] text-secondary font-semibold">Gold Jewellery Investment</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Our Packages &amp; Schemes</h2>
+<div class="w-12 h-[1px] bg-secondary mx-auto my-space-sm"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Handcrafted gold pieces, hallmarked for purity — accompanied by an exceptional gold voucher benefit toward your next heirloom acquisition.
+        </p>
+</div>
+<!-- 4 Package Cards Grid -->
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop">
+<!-- Package 1: ₹11,000 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-on-surface-variant">Package 01</span>
+<span class="px-2 py-0.5 bg-surface-container text-on-surface font-label-caption text-label-caption uppercase tracking-wider">Starter Sanchay</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Standard Entry</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Ideal for festive giftings and beginning your gold holding.</p>
+<div class="mb-space-lg pb-space-md bg-surface-container-low p-space-md rounded-DEFAULT">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant block">Deposit Value</span>
+<p class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none mt-1">₹11,000</p>
+</div>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-xs text-secondary font-semibold">
+<span class="material-symbols-outlined text-[18px] mt-0.5">stars</span>
+<span class="font-body-sm text-body-sm text-on-surface">✦ Get ₹5,500 Gold Coupon Free</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">100% BIS Hallmarked 916 Gold</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">lock</span>
+<span class="font-body-sm text-body-sm">Insured Vault &amp; Transparent Terms</span>
+</div>
+</div>
+</div>
+<a class="w-full py-3 bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface font-label-button text-label-button uppercase tracking-wider text-center" href="#appointment-concierge" onclick="selectScheme('Package 1 - ₹11,000')">
+            Enquire Scheme
+          </a>
+</div>
+<!-- Package 2: ₹22,000 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow relative">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-on-surface-variant">Package 02</span>
+<span class="px-2 py-0.5 bg-secondary/10 text-secondary font-label-caption text-label-caption uppercase tracking-wider font-semibold">Popular Choice</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Growth Accumulator</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Balanced accumulation with double voucher tier.</p>
+<div class="mb-space-lg pb-space-md bg-surface-container-low p-space-md rounded-DEFAULT">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant block">Deposit Value</span>
+<p class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none mt-1">₹22,000</p>
+</div>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-xs text-secondary font-semibold">
+<span class="material-symbols-outlined text-[18px] mt-0.5">stars</span>
+<span class="font-body-sm text-body-sm text-on-surface">✦ Get ₹11,000 Gold Coupon Free</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">100% BIS Hallmarked 916 Gold</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">diamond</span>
+<span class="font-body-sm text-body-sm">Access to Special Member Showcases</span>
+</div>
+</div>
+</div>
+<a class="w-full py-3 bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface font-label-button text-label-button uppercase tracking-wider text-center" href="#appointment-concierge" onclick="selectScheme('Package 2 - ₹22,000')">
+            Enquire Scheme
+          </a>
+</div>
+<!-- Package 3: ₹55,000 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-md flex flex-col justify-between hover:shadow-lg transition-shadow relative">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-bold">Package 03</span>
+<span class="px-2 py-0.5 bg-primary text-on-primary font-label-caption text-label-caption uppercase tracking-wider">Heritage Select</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Prestige Plan</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">For families planning significant milestones and weddings.</p>
+<div class="mb-space-lg pb-space-md bg-surface-container p-space-md rounded-DEFAULT">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-secondary font-semibold block">Deposit Value</span>
+<p class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none mt-1">₹55,000</p>
+</div>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-xs text-secondary font-semibold">
+<span class="material-symbols-outlined text-[18px] mt-0.5">stars</span>
+<span class="font-body-sm text-body-sm text-on-surface">✦ Get ₹27,500 Gold Coupon Free</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">Priority Hallmarking &amp; Purity Certificate</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">support_agent</span>
+<span class="font-body-sm text-body-sm">Dedicated Personal Concierge</span>
+</div>
+</div>
+</div>
+<a class="w-full py-3 bg-primary text-on-primary hover:bg-on-surface-variant transition-all font-label-button text-label-button uppercase tracking-wider text-center" href="#appointment-concierge" onclick="selectScheme('Package 3 - ₹55,000')">
+            Enquire Scheme
+          </a>
+</div>
+<!-- Package 4: ₹1,10,000 -->
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col justify-between hover:shadow-md transition-shadow">
+<div>
+<div class="flex items-center justify-between mb-space-sm">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-on-surface-variant">Package 04</span>
+<span class="px-2 py-0.5 bg-surface-container-high text-on-surface font-label-caption text-label-caption uppercase tracking-wider">Atelier Vault</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-1">Crown Sovereign</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-md">Our ultimate tier for premier bullion &amp; heirloom jewelry.</p>
+<div class="mb-space-lg pb-space-md bg-surface-container-low p-space-md rounded-DEFAULT">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant block">Deposit Value</span>
+<p class="font-headline-xl text-headline-xl text-on-surface font-bold leading-none mt-1">₹1,10,000</p>
+</div>
+<div class="space-y-space-sm mb-space-lg">
+<div class="flex items-start gap-space-xs text-secondary font-semibold">
+<span class="material-symbols-outlined text-[18px] mt-0.5">stars</span>
+<span class="font-body-sm text-body-sm text-on-surface">✦ Get ₹55,000 Gold Coupon Free</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">verified</span>
+<span class="font-body-sm text-body-sm">999.9 Fine Bullion Conversion Privilege</span>
+</div>
+<div class="flex items-start gap-space-xs text-on-surface-variant">
+<span class="material-symbols-outlined text-[18px] mt-0.5 text-secondary">home</span>
+<span class="font-body-sm text-body-sm">Private In-Home Consultation Option</span>
+</div>
+</div>
+</div>
+<a class="w-full py-3 bg-surface-container hover:bg-primary hover:text-on-primary transition-all text-on-surface font-label-button text-label-button uppercase tracking-wider text-center" href="#appointment-concierge" onclick="selectScheme('Package 4 - ₹1,10,000')">
+            Enquire Scheme
+          </a>
+</div>
+</div>
+<!-- Interactive Gold Scheme Return & Benefit Calculator -->
+<div class="mt-space-xl bg-surface-container-lowest p-space-lg lg:p-space-xl rounded-DEFAULT border border-secondary/20 shadow-md" id="scheme-calculator-card">
+  <div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+    <div class="lg:col-span-5 space-y-space-md">
+      <div class="space-y-space-xs">
+        <span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.25em] text-secondary font-semibold">Live Return Simulator</span>
+        <h3 class="font-headline-lg text-headline-lg text-on-surface">Suvarna Sanchay Scheme Calculator</h3>
+      </div>
+      <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+        Select your intended accumulation tier to see your immediate 50% gold voucher credit, total gold buying value, and equivalent 22K BIS gold weight.
+      </p>
+      <div class="flex flex-wrap gap-2 pt-space-xs" id="calc-preset-group">
+        <button type="button" class="calc-preset-btn px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-secondary text-secondary bg-secondary/10 hover:bg-secondary hover:text-white transition-all cursor-pointer" onclick="setCalcAmount(11000)">₹11,000</button>
+        <button type="button" class="calc-preset-btn px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-outline-variant text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-pointer" onclick="setCalcAmount(22000)">₹22,000</button>
+        <button type="button" class="calc-preset-btn px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-outline-variant text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-pointer" onclick="setCalcAmount(55000)">₹55,000</button>
+        <button type="button" class="calc-preset-btn px-3 py-1.5 text-xs font-semibold uppercase tracking-wider rounded border border-outline-variant text-on-surface hover:border-secondary hover:text-secondary transition-all cursor-pointer" onclick="setCalcAmount(110000)">₹1,10,000</button>
+      </div>
+      <div class="space-y-2 pt-2">
+        <div class="flex justify-between text-body-sm font-medium">
+          <span class="text-on-surface-variant">Custom Deposit Amount:</span>
+          <span class="text-secondary font-bold text-base" id="calc-deposit-display">₹11,000</span>
+        </div>
+        <input type="range" min="5000" max="200000" step="1000" value="11000" class="w-full accent-secondary cursor-pointer" id="calc-range-slider" oninput="onCalcSliderChange(this.value)">
+        <div class="flex justify-between text-[11px] text-outline">
+          <span>₹5,000</span>
+          <span>₹1,00,000</span>
+          <span>₹2,00,000</span>
+        </div>
+      </div>
+    </div>
+    <div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-DEFAULT">
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-space-md text-center">
+        <div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-sm">
+          <span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface-variant block">Your Deposit</span>
+          <p class="font-headline-md text-headline-md font-bold text-on-surface mt-1" id="calc-user-deposit">₹11,000</p>
+          <span class="font-label-caption text-[11px] text-outline block mt-1">100% Capital Safe</span>
+        </div>
+        <div class="bg-surface-container-lowest p-space-md rounded-DEFAULT shadow-sm border border-secondary/40">
+          <span class="font-label-caption text-label-caption uppercase tracking-wider text-secondary font-semibold block">Free Bonus Coupon</span>
+          <p class="font-headline-md text-headline-md font-bold text-secondary mt-1" id="calc-bonus-coupon">+ ₹5,500</p>
+          <span class="font-label-caption text-[11px] text-secondary font-medium block mt-1">✦ 50% Maison Gift</span>
+        </div>
+        <div class="bg-primary text-on-primary p-space-md rounded-DEFAULT shadow-sm">
+          <span class="font-label-caption text-label-caption uppercase tracking-wider text-secondary-container block">Total Gold Value</span>
+          <p class="font-headline-md text-headline-md font-bold text-surface-bright mt-1" id="calc-total-power">₹16,500</p>
+          <span class="font-label-caption text-[11px] text-surface-variant block mt-1" id="calc-gold-grams">≈ 2.34g 22K Gold</span>
+        </div>
+      </div>
+      <div class="mt-space-md pt-space-sm flex flex-col sm:flex-row items-center justify-between gap-space-md border-t border-outline-variant/30">
+        <div class="flex items-center gap-2 text-on-surface-variant text-body-sm">
+          <span class="material-symbols-outlined text-secondary text-[20px]">verified</span>
+          <span>Redeemable against any BIS 916 jewellery or 999.9 bullion coins.</span>
+        </div>
+        <button type="button" class="w-full sm:w-auto px-space-lg py-3 bg-primary text-on-primary font-label-button text-label-button uppercase tracking-wider hover:bg-secondary transition-colors whitespace-nowrap cursor-pointer" onclick="lockCalculatedScheme()">
+          Lock In This Scheme →
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+</section>
+<!-- Editorial Story Section: "Crafted for Generations" & About Us (Verbatim) -->
+<section class="w-full bg-surface-bright py-space-xl" id="about-section">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop items-center">
+<!-- Visual Story Left Column -->
+<div class="lg:col-span-5 relative scroll-reveal-left">
+<div class="bg-surface-container-low p-space-md rounded-DEFAULT shadow-sm">
+<div class="aspect-[3/4] w-full overflow-hidden">
+<img class="w-full h-full object-cover filter saturate-[0.9]" data-alt="Traditional Indian goldsmith crafting handcrafted 22 karat gold ornaments in warm workshop lighting, close-up of skilled hands with jeweler tools, authentic heritage atmosphere." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJqyiFm3TX0FBoqH2Z1DkrVbVWs67SKqyz_xqSOsj2vqGkFThSZ7261gS_wvfm7Yi-1f9vaKZo5GN4suPIbWjfC7VXNNMW3ZFnez3AKaFYfpHZl6dXpN9XYRIjpT_YEAo_WyCIfnKkSPWx_B3zHhDtjhSK857DeedUbg3iSnNFpshmHej_2ZQisP9SGGoXfH_hK86dpafoIYYSx86VWEKh_BDbWN234_Gy_Qm63s4h">
+</div>
+</div>
+<!-- Architectural Text Accent -->
+<div class="mt-space-md p-space-md bg-surface-container text-on-surface rounded-DEFAULT flex items-center justify-between">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-widest text-secondary font-semibold">SK Heritage Atelier</span>
+<span class="font-label-caption text-label-caption text-on-surface-variant">Morena • Madhya Pradesh</span>
+</div>
+</div>
+<!-- Text Right Column -->
+<div class="lg:col-span-7 flex flex-col justify-center space-y-space-md lg:pl-space-md scroll-reveal-right">
+<div class="space-y-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.25em] text-secondary font-semibold">Our Story &amp; Bullion Legacy</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface leading-tight">
+              Where tradition meets opportunity, <span class="italic font-normal">and every piece carries a promise.</span>
+</h2>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface leading-relaxed">
+            Welcome to <span class="font-semibold text-secondary">SK JEWELLERS</span> — a name devoted to genuine gold and silver, honest craftsmanship, and relationships that last across generations.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            For families across India, precious metal is more than adornment. It is memory, security, and celebration in a single form. We honour that meaning by offering jewellery of dependable purity, backed by clear standards and a commitment to doing right by every customer who walks through our doors.
+          </p>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+            Whether you are buying for investment, for a gift, or for a moment you'll treasure, we believe the experience should be as pure as the metal itself — transparent, unhurried, and built on trust. That belief guides everything we do: from the way we source and certify, to the way we treat the people who make up the growing SK family.
+          </p>
+<!-- Editorial Pull-Quote Block -->
+<div class="bg-surface-container-high p-space-md rounded-DEFAULT mt-space-sm">
+<p class="font-headline-sm text-headline-sm text-on-surface italic leading-snug">
+              “Empowering people. Enriching lives — with gold that carries meaning far beyond its weight.”
+            </p>
+<span class="font-label-caption text-label-caption uppercase tracking-[0.2em] text-secondary font-semibold block mt-space-xs">
+              The SK Promise • Suvarna Kala Maison
+            </span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Crafted with Care: 3 Pillars of Authenticity (Exact Verbatim Website Data) -->
+<section class="w-full bg-surface py-space-xl" id="craftsmanship-section">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="text-center max-w-xl mx-auto mb-space-xl space-y-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.25em] text-secondary font-semibold">The Making</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Crafted with Care</h2>
+<div class="w-12 h-[1px] bg-secondary mx-auto my-space-sm"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Every ornament passes through three promises before it reaches your hands.
+        </p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-gutter-desktop">
+<!-- Pillar 01 -->
+<div class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-display-hero text-display-hero text-secondary/30 font-light leading-none">01</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">scale</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Honest Sourcing</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              We source genuine gold and silver of dependable purity, with pricing that stays transparent from the first conversation to the final bill.
+            </p>
+</div>
+<div class="pt-space-md">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-secondary font-semibold">100% Rate Transparency</span>
+</div>
+</div>
+<!-- Pillar 02 -->
+<div class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-display-hero text-display-hero text-secondary/30 font-light leading-none">02</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">handyman</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Skilled Crafting</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Traditional artisans shape each piece by hand, blending heritage technique with modern finishing for jewellery that lasts generations.
+            </p>
+</div>
+<div class="pt-space-md">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-secondary font-semibold">Generational Artisans</span>
+</div>
+</div>
+<!-- Pillar 03 -->
+<div class="bg-surface-container-low p-space-lg rounded-DEFAULT flex flex-col justify-between hover:bg-surface-container transition-colors">
+<div>
+<div class="flex items-center justify-between mb-space-md">
+<span class="font-display-hero text-display-hero text-secondary/30 font-light leading-none">03</span>
+<div class="w-10 h-10 rounded-full bg-surface-container-lowest flex items-center justify-center text-secondary shadow-sm">
+<span class="material-symbols-outlined text-[20px]">verified</span>
+</div>
+</div>
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Certified Hallmarking</h3>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+              Every ornament is BIS hallmark certified, so the purity you're promised is the purity you own — verified, tested, and assured.
+            </p>
+</div>
+<div class="pt-space-md">
+<span class="font-label-caption text-label-caption uppercase tracking-wider text-secondary font-semibold">BIS Bureau of Standards</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Values & Purpose Grid (Verbatim Website Data) -->
+<section class="w-full bg-surface-container-low py-space-xl" id="values-section">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="text-center max-w-xl mx-auto mb-space-xl space-y-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.25em] text-secondary font-semibold">What We Stand For</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Our Values</h2>
+<div class="w-12 h-[1px] bg-secondary mx-auto my-space-sm"></div>
+<p class="font-body-md text-body-md text-on-surface-variant">
+          Four foundational principles shape every decision at SK JEWELLERS.
+        </p>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter mb-space-xl">
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">handshake</span>
+</div>
+<h3 class="font-label-button text-label-button uppercase tracking-[0.16em] text-on-surface font-bold mb-space-xs">TRUST</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            We build trust with every relationship — honesty first, always.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">diamond</span>
+</div>
+<h3 class="font-label-button text-label-button uppercase tracking-[0.16em] text-on-surface font-bold mb-space-xs">QUALITY</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Pure metal. Timeless value. Quality you can feel and verify.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">groups</span>
+</div>
+<h3 class="font-label-button text-label-button uppercase tracking-[0.16em] text-on-surface font-bold mb-space-xs">COMMUNITY</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Growing together for a stronger tomorrow — customers first.
+          </p>
+</div>
+<div class="bg-surface-container-lowest p-space-lg rounded-DEFAULT shadow-sm flex flex-col items-center text-center">
+<div class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-secondary mb-space-md">
+<span class="material-symbols-outlined text-[24px]">trending_up</span>
+</div>
+<h3 class="font-label-button text-label-button uppercase tracking-[0.16em] text-on-surface font-bold mb-space-xs">GROWTH</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">
+            Unlocking opportunity and lasting value for every customer.
+          </p>
+</div>
+</div>
+<!-- Stat Provenance Ticker Strip (Verbatim Website Data) -->
+<div class="bg-primary text-on-primary rounded-DEFAULT p-space-lg shadow-md">
+<div class="grid grid-cols-2 md:grid-cols-4 gap-gutter text-center divide-y md:divide-y-0 md:divide-x divide-on-surface-variant/30">
+<div class="p-space-sm flex flex-col items-center justify-center">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-serif">100%</span>
+<span class="font-label-button text-label-button uppercase tracking-wider text-surface mt-1">Hallmark Purity</span>
+</div>
+<div class="p-space-sm flex flex-col items-center justify-center">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-serif">999.9</span>
+<span class="font-label-button text-label-button uppercase tracking-wider text-surface mt-1">Fine Gold Standard</span>
+</div>
+<div class="p-space-sm flex flex-col items-center justify-center">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-serif">24/7</span>
+<span class="font-label-button text-label-button uppercase tracking-wider text-surface mt-1">Customer Support</span>
+</div>
+<div class="p-space-sm flex flex-col items-center justify-center">
+<span class="font-headline-xl text-headline-xl text-secondary-container font-serif">∞</span>
+<span class="font-label-button text-label-button uppercase tracking-wider text-surface mt-1">Timeless Value</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Mission & Vision Section (Verbatim Website Data) -->
+<section class="w-full bg-surface py-space-xl" id="mission-section">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- Vision Column -->
+<div class="lg:col-span-5 bg-surface-container-low p-space-xl rounded-DEFAULT flex flex-col justify-between">
+<div class="space-y-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] text-secondary font-semibold">Our Purpose &amp; Focus</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Our Vision</h3>
+</div>
+<p class="font-body-lg text-body-lg text-on-surface-variant leading-relaxed">
+              To make gold ownership more rewarding — pairing premium jewellery with an experience that encourages long-term relationships, honest dealing, and steady, sustainable growth for the families we serve.
+            </p>
+</div>
+<div class="pt-space-lg flex items-center gap-space-sm">
+<span class="w-8 h-[1px] bg-secondary"></span>
+<span class="font-label-caption text-label-caption uppercase tracking-widest text-on-surface font-semibold">The House of Gold</span>
+</div>
+</div>
+<!-- Mission Column -->
+<div class="lg:col-span-7 bg-surface-container-high p-space-xl rounded-DEFAULT">
+<div class="space-y-space-xs mb-space-lg">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] text-secondary font-semibold">Clarity of Purpose</span>
+<h3 class="font-headline-lg text-headline-lg text-on-surface">Our Mission</h3>
+</div>
+<div class="space-y-space-md">
+<div class="flex items-start gap-space-md bg-surface-container-lowest p-space-md rounded-DEFAULT">
+<span class="font-label-button text-label-button uppercase text-secondary font-bold px-2 py-1 bg-surface-container rounded-DEFAULT">I</span>
+<p class="font-body-md text-body-md text-on-surface">Provide quality gold &amp; silver jewellery at competitive, honest prices.</p>
+</div>
+<div class="flex items-start gap-space-md bg-surface-container-lowest p-space-md rounded-DEFAULT">
+<span class="font-label-button text-label-button uppercase text-secondary font-bold px-2 py-1 bg-surface-container rounded-DEFAULT">II</span>
+<p class="font-body-md text-body-md text-on-surface">Build long-term customer relationships rooted in trust.</p>
+</div>
+<div class="flex items-start gap-space-md bg-surface-container-lowest p-space-md rounded-DEFAULT">
+<span class="font-label-button text-label-button uppercase text-secondary font-bold px-2 py-1 bg-surface-container rounded-DEFAULT">III</span>
+<p class="font-body-md text-body-md text-on-surface">Uphold complete transparency, purity and fair dealing in every transaction.</p>
+</div>
+<div class="flex items-start gap-space-md bg-surface-container-lowest p-space-md rounded-DEFAULT">
+<span class="font-label-button text-label-button uppercase text-secondary font-bold px-2 py-1 bg-surface-container rounded-DEFAULT">IV</span>
+<p class="font-body-md text-body-md text-on-surface">Encourage balanced, sustainable financial growth for our community.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Visit the House of Gold / Concierge & Contact (Verbatim Website Data) -->
+<section class="w-full bg-surface-container-low py-space-xl" id="appointment-concierge">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="bg-surface-container-lowest rounded-DEFAULT shadow-sm p-space-lg lg:p-space-xl">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
+<!-- Contact Atelier Information -->
+<div class="lg:col-span-5 flex flex-col justify-between space-y-space-lg">
+<div class="space-y-space-md">
+<div class="space-y-space-xs">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.25em] text-secondary font-semibold">Get in Touch</span>
+<h2 class="font-headline-xl text-headline-xl text-on-surface">Visit the House of Gold</h2>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                We'd love to welcome you. Reach out with any question about our jewellery, purity standards, or the SK family — and we'll respond with care.
+              </p>
+<!-- Address & Phone list (Exact Verbatim) -->
+<div class="space-y-space-md pt-space-xs font-body-sm text-body-sm">
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">location_on</span>
+</div>
+<div>
+<span class="font-semibold text-on-surface block">Atelier Address</span>
+<p class="text-on-surface-variant">Near Maa beti chauraha, Housing Board colony, Morena, Madhya Pradesh, India</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">call</span>
+</div>
+<div>
+<span class="font-semibold text-on-surface block">Telephones</span>
+<p class="text-on-surface-variant">+91 8103511405 • +91 9827866436</p>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<div class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center text-secondary shrink-0">
+<span class="material-symbols-outlined text-[18px]">mail</span>
+</div>
+<div>
+<span class="font-semibold text-on-surface block">Direct Inquiry</span>
+<p class="text-on-surface-variant">hello@skjewellerspvtltd.com</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Hours card -->
+<div class="bg-surface-container p-space-md rounded-DEFAULT">
+<span class="font-label-eyebrow text-label-eyebrow uppercase tracking-wider text-secondary font-semibold">Boutique Hours</span>
+<p class="font-body-sm text-body-sm text-on-surface font-medium mt-1">Monday – Sunday: 10:00 AM – 8:30 PM</p>
+<span class="font-label-caption text-label-caption text-on-surface-variant block mt-0.5">Private bridal consultations available by appointment</span>
+</div>
+</div>
+<!-- Structured Inquiry Form -->
+<div class="lg:col-span-7 bg-surface-container-low p-space-lg rounded-DEFAULT">
+<h3 class="font-headline-md text-headline-md text-on-surface mb-space-xs">Send Enquiry / Book Consultation</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant mb-space-lg">
+              Please share your preferred jewelry requirements or investment package interest.
+            </p>
+<form class="space-y-space-md" id="sk-inquiry-form" onsubmit="submitEnquiryForm(event)">
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">Your Name *</label>
+<input id="inquiry-name" class="w-full bg-surface-container-lowest px-space-md py-3 text-body-md text-on-surface focus:outline-none placeholder:text-outline-variant rounded-DEFAULT border border-transparent focus:border-secondary transition-colors" placeholder="Full Name" required="" type="text">
+</div>
+<div>
+<label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">Email *</label>
+<input id="inquiry-email" class="w-full bg-surface-container-lowest px-space-md py-3 text-body-md text-on-surface focus:outline-none placeholder:text-outline-variant rounded-DEFAULT border border-transparent focus:border-secondary transition-colors" placeholder="name@domain.com" required="" type="email">
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-md">
+<div>
+<label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">Phone Number *</label>
+<input id="inquiry-phone" class="w-full bg-surface-container-lowest px-space-md py-3 text-body-md text-on-surface focus:outline-none placeholder:text-outline-variant rounded-DEFAULT border border-transparent focus:border-secondary transition-colors" placeholder="+91 XXXXX XXXXX" required="" type="tel">
+</div>
+<div>
+<label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">Select Package or Interest</label>
+<select class="w-full bg-surface-container-lowest px-space-md py-3 text-body-md text-on-surface focus:outline-none rounded-DEFAULT border border-transparent focus:border-secondary transition-colors" id="package-selector">
+<option value="General Consultation">General Atelier Inquiry</option>
+<option value="Package 1 - ₹11,000">Package 1 (₹11,000 + ₹5,500 Coupon)</option>
+<option value="Package 2 - ₹22,000">Package 2 (₹22,000 + ₹11,000 Coupon)</option>
+<option value="Package 3 - ₹55,000">Package 3 (₹55,000 + ₹27,500 Coupon)</option>
+<option value="Package 4 - ₹1,10,000">Package 4 (₹1,10,000 + ₹55,000 Coupon)</option>
+<option value="Bridal Custom Atelier">Bespoke Bridal Jewellery Consultation</option>
+</select>
+</div>
+</div>
+<div>
+<label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">Message / Requirements</label>
+<textarea id="inquiry-message" class="w-full bg-surface-container-lowest px-space-md py-3 text-body-md text-on-surface focus:outline-none placeholder:text-outline-variant rounded-DEFAULT border border-transparent focus:border-secondary transition-colors" placeholder="Tell us about the gold scheme, bridal set, or bullion requirements you are considering..." rows="4"></textarea>
+</div>
+<div class="flex flex-col sm:flex-row items-center justify-between gap-space-md pt-space-xs">
+<span class="font-label-caption text-label-caption text-on-surface-variant flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px] text-secondary">lock</span>
+Confidential • Dedicated concierge reply within 4 hours
+</span>
+<button id="inquiry-submit-btn" class="w-full sm:w-auto px-space-xl py-3.5 bg-primary text-on-primary font-label-button text-label-button uppercase tracking-[0.14em] hover:bg-on-surface-variant transition-colors shadow-sm cursor-pointer flex items-center justify-center gap-2" type="submit">
+<span>Send Enquiry</span>
+<span class="material-symbols-outlined text-[16px]">send</span>
+</button>
+</div>
+<div class="hidden p-space-md bg-surface-container-lowest border border-secondary/30 rounded-DEFAULT shadow-sm text-center" id="enquiry-confirmation">
+<div class="flex items-center justify-center gap-2 text-secondary mb-1">
+<span class="material-symbols-outlined text-[24px]">verified</span>
+<span class="font-headline-sm text-headline-sm text-on-surface">Consultation Request Confirmed</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant" id="enquiry-confirmation-text">
+✦ Thank you. An SK Jewellers concierge has received your request and will call you within 4 hours.
+</p>
+<span class="inline-block mt-2 font-label-caption text-label-caption uppercase tracking-widest text-secondary font-semibold" id="enquiry-ticket-id">Ref: SK-2025-0819</span>
+</div>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section>
+</div></main>
+
+<footer class="w-full bg-surface-container-low pt-space-xl pb-margin-desktop mt-space-xl shadow-[0_-1px_0_rgba(0,0,0,0.04)]">
+<div class="max-w-[1440px] mx-auto px-margin lg:px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-desktop mb-space-xl">
+<div class="space-y-space-md">
+<div class="flex items-center gap-space-sm cursor-pointer" onclick="scrollToTop()">
+<img alt="SK JEWELLERS" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WH1b-JfBGp4RnmeDGCxYma1PvWI4QfOGcLCXlh4NRU2rUhzSb4fkfO3KhPguRz_lBpjT-_8oQ8fUwZMzSIJ5on9_WlOZi_4FbuSSLKqYgpJ3luldx31gGXYv3lxU0W6oTaDmFYCh7jbpovHPiSmGsXSoXGUwUcIcDfJfI9C9YcPZ9_3pEnvIE6gdnRMS78wKg8NZeia0rsv_feBgLVjJ5O0zDNxaXd-prb3Wqxc6WRqQ">
+<span class="font-headline-sm text-headline-sm uppercase text-on-surface">SK JEWELLERS</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed">Suvarna Kala Jewellers Private Limited. Custodians of pristine heritage, hallmarked craftsmanship, and investment-grade precious metals since inception.</p>
+<div class="pt-space-xs">
+<p class="font-label-caption text-label-caption uppercase tracking-widest text-secondary font-semibold">BIS Accredited • 916 &amp; 999.9 Certified</p>
+<button onclick="replayCurtainIntro()" class="mt-2 text-[11px] text-secondary hover:text-on-surface transition-colors uppercase tracking-wider underline bg-transparent border-0 cursor-pointer">
+✦ Replay Maison Introduction
+</button>
+</div>
+</div>
+
+<div class="space-y-space-md">
+<h4 class="font-label-button text-label-button uppercase tracking-wider text-on-surface">Atelier &amp; Presence</h4>
+<div class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<p class="text-on-surface font-medium">Flagship Boutique:</p>
+<p>Near Maa beti chauraha, Housing Board colony,</p>
+<p>Morena, Madhya Pradesh, India</p>
+<p class="pt-space-xs"><span class="font-medium text-on-surface">Concierge:</span> <a href="tel:+918103511405" class="hover:text-secondary transition-colors">+91 8103511405</a></p>
+<p><span class="font-medium text-on-surface">Direct:</span> <a href="mailto:concierge@skjewellerspvtltd.com" class="hover:text-secondary transition-colors">concierge@skjewellerspvtltd.com</a></p>
+</div>
+</div>
+
+<div class="space-y-space-md">
+<h4 class="font-label-button text-label-button uppercase tracking-wider text-on-surface">Collections &amp; Schemes</h4>
+<ul class="space-y-space-xs font-body-sm text-body-sm text-on-surface-variant">
+<li><a class="hover:text-secondary transition-colors cursor-pointer" href="#investment-schemes" onclick="selectScheme('Package 1 - ₹11,000')">Suvarna Sanchay Scheme</a></li>
+<li><a class="hover:text-secondary transition-colors cursor-pointer" href="#investment-schemes" onclick="scrollToCalculator()">Gold Accumulation Calculator</a></li>
+<li><a class="hover:text-secondary transition-colors cursor-pointer" href="#collections-section" onclick="openCollectionModal('bridal')">Bridal Heritage Vault</a></li>
+<li><a class="hover:text-secondary transition-colors cursor-pointer" href="#collections-section" onclick="openCollectionModal('bullion')">999.9 Fine Bullion Ingots</a></li>
+<li><a class="hover:text-secondary transition-colors cursor-pointer" href="#craftsmanship-section">Hallmark &amp; Purity Assurance</a></li>
+</ul>
+</div>
+
+<div class="space-y-space-md">
+<h4 class="font-label-button text-label-button uppercase tracking-wider text-on-surface">Private Atelier Enquiry</h4>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Receive seasonal monographs, exclusive bullion rate bulletins, and bespoke jewelry previews.</p>
+<form onsubmit="submitNewsletter(event)" class="flex flex-col gap-space-xs">
+<div class="flex bg-surface-container-lowest p-1 rounded-DEFAULT border border-outline-variant/30 focus-within:border-secondary transition-colors">
+<input id="newsletter-email" class="w-full bg-transparent px-space-sm font-body-sm text-body-sm text-on-surface focus:outline-none placeholder:text-outline-variant" placeholder="Your email address" type="email" required="">
+<button class="px-space-md py-space-xs bg-primary text-on-primary font-label-button text-label-button uppercase tracking-wider hover:bg-secondary transition-colors inline-flex items-center justify-center cursor-pointer" type="submit">Send</button>
+</div>
+<span class="font-label-caption text-label-caption text-outline">Discretion guaranteed. No digital spam.</span>
+</form>
+</div>
+</div>
+
+<div class="py-space-md bg-surface-container flex flex-wrap items-center justify-around gap-space-md px-space-md text-center rounded-DEFAULT">
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">verified</span><span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface">100% BIS Hallmarked</span></div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">lock</span><span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface">Insured Pan-India Transit</span></div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">diamond</span><span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface">Certified Natural Gemstones</span></div>
+<div class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[20px]">currency_rupee</span><span class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface">Transparent Bullion Rates</span></div>
+</div>
+
+<div class="pt-space-lg flex flex-col md:flex-row items-center justify-between gap-space-md font-label-caption text-label-caption uppercase tracking-widest text-outline">
+<p>© 2025 Suvarna Kala Jewellers Pvt Ltd. All rights reserved.</p>
+<div class="flex gap-space-md">
+<button onclick="openPolicyModal('privacy')" class="hover:text-on-surface transition-colors bg-transparent border-0 text-outline cursor-pointer text-[10px] uppercase tracking-widest">Privacy Policy</button>
+<button onclick="openPolicyModal('purity')" class="hover:text-on-surface transition-colors bg-transparent border-0 text-outline cursor-pointer text-[10px] uppercase tracking-widest">Terms of Purity</button>
+<button onclick="openPolicyModal('bullion')" class="hover:text-on-surface transition-colors bg-transparent border-0 text-outline cursor-pointer text-[10px] uppercase tracking-widest">Bullion Disclaimer</button>
+</div>
+</div>
+</div>
+</footer>
+
+<!-- ===== FLOATING BUTTONS ===== -->
+<!-- Back to top -->
+<button id="back-to-top" class="floating-btn" onclick="scrollToTop()" aria-label="Back to top" title="Back to top">
+  <span class="material-symbols-outlined text-[22px]">arrow_upward</span>
+</button>
+
+<!-- WhatsApp Concierge -->
+<a id="whatsapp-btn" class="floating-btn" href="https://wa.me/918103511405?text=Hello%20SK%20Jewellers%2C%20I%20would%20like%20to%20inquire%20about%20your%20gold%20jewellery%20and%20investment%20packages." target="_blank" rel="noopener noreferrer" aria-label="Chat with SK Concierge on WhatsApp" title="Chat with Concierge">
+  <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24"><path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.771-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.087-.179.182-.077.357.101.174.453.748.972 1.21.67.596 1.234.78 1.408.867.174.087.275.072.376-.043.101-.116.433-.506.549-.679.116-.173.231-.144.39-.087s1.011.477 1.184.564c.173.087.289.13.332.202.043.072.043.419-.101.824zM12 2C6.477 2 2 6.477 2 12c0 1.891.524 3.66 1.434 5.176L2 22l4.981-1.306C8.423 21.547 10.153 22 12 22c5.523 0 10-4.477 10-10S17.523 2 12 2z"/></svg>
+</a>
+
+<!-- ===== CLIENT PORTAL & SAVINGS ACCOUNT MODAL ===== -->
+<div id="portal-modal" class="sk-modal-backdrop" onclick="closePortalModal(event)" role="dialog" aria-modal="true" aria-label="SK Client Portal">
+  <div class="sk-modal-card w-full max-w-lg p-space-lg" onclick="event.stopPropagation()">
+    <div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+      <div class="flex items-center gap-space-sm">
+        <img alt="SK" class="h-7 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/AEtjO1WH1b-JfBGp4RnmeDGCxYma1PvWI4QfOGcLCXlh4NRU2rUhzSb4fkfO3KhPguRz_lBpjT-_8oQ8fUwZMzSIJ5on9_WlOZi_4FbuSSLKqYgpJ3luldx31gGXYv3lxU0W6oTaDmFYCh7jbpovHPiSmGsXSoXGUwUcIcDfJfI9C9YcPZ9_3pEnvIE6gdnRMS78wKg8NZeia0rsv_feBgLVjJ5O0zDNxaXd-prb3Wqxc6WRqQ">
+        <div>
+          <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface leading-none">SK Client Portal</h3>
+          <span class="font-label-caption text-label-caption uppercase tracking-widest text-secondary font-semibold">Suvarna Kala Maison</span>
+        </div>
+      </div>
+      <button onclick="closePortalModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors cursor-pointer border-0" aria-label="Close portal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="flex border-b border-outline-variant/30 mt-space-md">
+      <button class="portal-tab-btn flex-1 py-2 font-label-button text-xs uppercase tracking-wider text-secondary border-b-2 border-secondary bg-transparent cursor-pointer font-bold" id="portal-tab-login" onclick="switchPortalTab('login')">
+        Member Login
+      </button>
+      <button class="portal-tab-btn flex-1 py-2 font-label-button text-xs uppercase tracking-wider text-on-surface-variant bg-transparent cursor-pointer" id="portal-tab-scheme" onclick="switchPortalTab('scheme')">
+        Check Scheme Balance
+      </button>
+    </div>
+
+    <!-- Login View -->
+    <div id="portal-view-login" class="mt-space-md space-y-space-md">
+      <p class="font-body-sm text-body-sm text-on-surface-variant">
+        Access your Gold Passbook, active scheme vouchers, and private atelier appointments.
+      </p>
+      <div>
+        <label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">Registered Mobile Number / Member ID</label>
+        <input id="portal-login-input" type="text" class="w-full bg-surface-container-low px-space-md py-2.5 text-body-md text-on-surface rounded-DEFAULT border border-transparent focus:border-secondary focus:outline-none" placeholder="+91 98XXX XXXXX or SK-MEM-104">
+      </div>
+      <div>
+        <label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">PIN / One-Time Passcode</label>
+        <input id="portal-pin-input" type="password" class="w-full bg-surface-container-low px-space-md py-2.5 text-body-md text-on-surface rounded-DEFAULT border border-transparent focus:border-secondary focus:outline-none" placeholder="Enter 4-digit PIN">
+      </div>
+      <div class="flex gap-space-sm pt-space-xs">
+        <button type="button" class="flex-1 py-3 bg-primary text-on-primary font-label-button text-label-button uppercase tracking-wider hover:bg-secondary transition-colors cursor-pointer" onclick="handlePortalLogin()">
+          Access Portfolio
+        </button>
+        <button type="button" class="px-space-md py-3 bg-surface-container text-secondary font-label-button text-label-button uppercase tracking-wider hover:bg-surface-container-high transition-colors cursor-pointer" onclick="loadDemoPortalUser()">
+          Demo Account
+        </button>
+      </div>
+    </div>
+
+    <!-- Scheme Balance Lookup View -->
+    <div id="portal-view-scheme" class="mt-space-md space-y-space-md hidden">
+      <p class="font-body-sm text-body-sm text-on-surface-variant">
+        Look up your Suvarna Sanchay Scheme account status, total accumulated coupon, and eligible gold grams.
+      </p>
+      <div>
+        <label class="font-label-caption text-label-caption uppercase tracking-wider text-on-surface block mb-1">Passbook Folio Number or Phone</label>
+        <div class="flex gap-2">
+          <input id="scheme-search-input" type="text" class="flex-1 bg-surface-container-low px-space-md py-2.5 text-body-md text-on-surface rounded-DEFAULT border border-transparent focus:border-secondary focus:outline-none" placeholder="e.g. SK-SCH-55000 or 9827866436">
+          <button type="button" class="px-space-md py-2.5 bg-secondary text-white font-label-button text-xs uppercase tracking-wider hover:bg-on-surface transition-colors cursor-pointer" onclick="searchSchemeAccount()">
+            Lookup
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Active Demo Account Display (revealed on login) -->
+    <div id="portal-account-card" class="mt-space-md p-space-md bg-surface-container-low rounded-DEFAULT border border-secondary/20 hidden">
+      <div class="flex items-center justify-between pb-2 border-b border-outline-variant/30 mb-space-sm">
+        <div>
+          <span class="font-headline-sm text-[16px] text-on-surface block" id="portal-user-name">Rajesh Sharma</span>
+          <span class="font-label-caption text-[11px] text-secondary font-semibold" id="portal-user-id">Member #SK-2024-9168</span>
+        </div>
+        <span class="px-2 py-0.5 bg-emerald-100 text-emerald-800 rounded font-label-caption text-[10px] uppercase font-bold">Active Member</span>
+      </div>
+      <div class="grid grid-cols-2 gap-space-sm font-body-sm text-body-sm">
+        <div>
+          <span class="text-outline text-xs block">Active Scheme:</span>
+          <span class="font-medium text-on-surface" id="portal-scheme-name">Prestige Plan (₹55,000)</span>
+        </div>
+        <div>
+          <span class="text-outline text-xs block">Free Bonus Voucher:</span>
+          <span class="font-semibold text-secondary" id="portal-bonus-voucher">₹27,500 Available</span>
+        </div>
+        <div>
+          <span class="text-outline text-xs block">Total Buying Power:</span>
+          <span class="font-bold text-on-surface text-base" id="portal-total-power">₹82,500</span>
+        </div>
+        <div>
+          <span class="text-outline text-xs block">Assurance:</span>
+          <span class="font-medium text-on-surface">BIS 916 Guaranteed</span>
+        </div>
+      </div>
+      <button type="button" class="w-full mt-space-md py-2 bg-primary text-white font-label-button text-xs uppercase tracking-wider hover:bg-secondary transition-colors cursor-pointer" onclick="closePortalModal(); selectScheme('Package 3 - ₹55,000')">
+        Book Appointment to Redeem →
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== COLLECTION QUICK VIEW MODAL ===== -->
+<div id="collection-modal" class="sk-modal-backdrop" onclick="closeCollectionModal(event)" role="dialog" aria-modal="true" aria-label="Collection Details">
+  <div class="sk-modal-card w-full max-w-2xl p-space-lg" onclick="event.stopPropagation()">
+    <div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30 mb-space-md">
+      <div class="flex items-center gap-space-xs">
+        <span class="font-label-eyebrow text-label-eyebrow uppercase tracking-[0.2em] text-secondary font-semibold">SK Atelier Vitrine</span>
+      </div>
+      <button onclick="closeCollectionModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors cursor-pointer border-0" aria-label="Close modal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-space-lg items-center">
+      <div class="aspect-square w-full rounded-DEFAULT overflow-hidden bg-surface-container-low p-2">
+        <img id="col-modal-img" class="w-full h-full object-cover rounded-DEFAULT" src="" alt="Collection Item">
+      </div>
+      <div class="space-y-space-sm">
+        <span class="px-2 py-0.5 bg-secondary/10 text-secondary rounded font-label-caption text-[11px] uppercase tracking-wider font-semibold" id="col-modal-purity">
+          22K / 916 BIS Hallmarked
+        </span>
+        <h3 class="font-headline-lg text-headline-lg text-on-surface leading-tight" id="col-modal-title">
+          Title
+        </h3>
+        <p class="font-headline-md text-headline-md text-secondary font-bold" id="col-modal-price">
+          From ₹15,000
+        </p>
+        <p class="font-body-sm text-body-sm text-on-surface-variant leading-relaxed" id="col-modal-desc">
+          Description
+        </p>
+        <div class="p-space-sm bg-surface-container-low rounded-DEFAULT space-y-1 font-body-sm text-xs">
+          <div class="flex justify-between">
+            <span class="text-on-surface-variant">Certification:</span>
+            <span class="font-medium text-on-surface" id="col-modal-cert">BIS Govt. Hallmarked</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-on-surface-variant">Insured Delivery:</span>
+            <span class="font-medium text-on-surface">Pan-India Compliant</span>
+          </div>
+          <div class="flex justify-between">
+            <span class="text-on-surface-variant">Custom Sizing:</span>
+            <span class="font-medium text-on-surface">Available at Morena Atelier</span>
+          </div>
+        </div>
+        <button type="button" class="w-full py-3.5 bg-primary text-on-primary font-label-button text-label-button uppercase tracking-wider hover:bg-secondary transition-colors cursor-pointer" onclick="inquireFromModal()">
+          Enquire About This Collection →
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ===== POLICY & PURITY MODAL ===== -->
+<div id="policy-modal" class="sk-modal-backdrop" onclick="closePolicyModal(event)" role="dialog" aria-modal="true" aria-label="Policies and Purity Standards">
+  <div class="sk-modal-card w-full max-w-2xl p-space-lg" onclick="event.stopPropagation()">
+    <div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30 mb-space-md">
+      <h3 class="font-headline-sm text-headline-sm uppercase text-on-surface">Suvarna Kala Standards</h3>
+      <button onclick="closePolicyModal()" class="w-8 h-8 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors cursor-pointer border-0" aria-label="Close modal">
+        <span class="material-symbols-outlined text-[18px]">close</span>
+      </button>
+    </div>
+
+    <div class="flex border-b border-outline-variant/30 mb-space-md">
+      <button class="policy-tab-btn flex-1 py-2 font-label-button text-xs uppercase tracking-wider text-secondary border-b-2 border-secondary bg-transparent cursor-pointer font-bold" id="policy-tab-purity" onclick="switchPolicyTab('purity')">
+        BIS Purity
+      </button>
+      <button class="policy-tab-btn flex-1 py-2 font-label-button text-xs uppercase tracking-wider text-on-surface-variant bg-transparent cursor-pointer" id="policy-tab-bullion" onclick="switchPolicyTab('bullion')">
+        Bullion &amp; Buyback
+      </button>
+      <button class="policy-tab-btn flex-1 py-2 font-label-button text-xs uppercase tracking-wider text-on-surface-variant bg-transparent cursor-pointer" id="policy-tab-privacy" onclick="switchPolicyTab('privacy')">
+        Client Privacy
+      </button>
+    </div>
+
+    <div id="policy-content" class="space-y-space-md font-body-sm text-body-sm text-on-surface-variant max-h-96 overflow-y-auto pr-2">
+      <!-- Injected via switchPolicyTab -->
+    </div>
+
+    <div class="pt-space-md mt-space-md border-t border-outline-variant/30 text-right">
+      <button class="px-space-lg py-2.5 bg-primary text-on-primary font-label-button text-xs uppercase tracking-wider hover:bg-secondary transition-colors cursor-pointer" onclick="closePolicyModal()">
+        Understood &amp; Close
+      </button>
+    </div>
+  </div>
+</div>
+
+<!-- ===== TOAST CONTAINER ===== -->
+<div id="toast-container"></div>
+
+<!-- ===== COMPREHENSIVE JAVASCRIPT ===== -->
+<script>
+  /* ===== 1. GRAND CURTAIN INTRO CONTROLLER ===== */
+  let curtainOpened = false;
+
+  function initCurtainIntro() {
+    const overlay = document.getElementById('sk-intro-overlay');
+    if (!overlay) return;
+
+    let hasSeen = false;
+    try {
+      hasSeen = sessionStorage.getItem('sk_curtain_seen') === 'true';
+    } catch (e) {
+      hasSeen = false;
+    }
+
+    if (hasSeen) {
+      overlay.classList.add('hidden-curtain');
+      curtainOpened = true;
+      return;
+    }
+
+    createGoldParticles();
+
+    // Automatically trigger curtain reveal after 2.3 seconds
+    setTimeout(() => {
+      if (!curtainOpened) {
+        openCurtain();
+      }
+    }, 2300);
+  }
+
+  function openCurtain(event) {
+    if (event) {
+      event.stopPropagation();
+    }
+    if (curtainOpened) return;
+    curtainOpened = true;
+
+    const overlay = document.getElementById('sk-intro-overlay');
+    if (!overlay) return;
+
+    overlay.classList.add('reveal');
+    try {
+      sessionStorage.setItem('sk_curtain_seen', 'true');
+    } catch (e) {}
+
+    // Remove from interaction tree once animation finishes
+    setTimeout(() => {
+      overlay.classList.add('hidden-curtain');
+    }, 1500);
+  }
+
+  function replayCurtainIntro() {
+    const overlay = document.getElementById('sk-intro-overlay');
+    if (!overlay) return;
+    try {
+      sessionStorage.removeItem('sk_curtain_seen');
+    } catch (e) {}
+    curtainOpened = false;
+    overlay.classList.remove('reveal', 'hidden-curtain');
+    createGoldParticles();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setTimeout(() => {
+      if (!curtainOpened) openCurtain();
+    }, 3000);
+  }
+
+  function createGoldParticles() {
+    const container = document.getElementById('gold-particles');
+    if (!container) return;
+    container.innerHTML = '';
+    const particleCount = 28;
+    for (let i = 0; i < particleCount; i++) {
+      const span = document.createElement('span');
+      span.className = 'gold-sparkle';
+      const size = Math.random() * 4 + 2;
+      span.style.width = size + 'px';
+      span.style.height = size + 'px';
+      span.style.left = Math.random() * 100 + '%';
+      span.style.animationDelay = (Math.random() * 2.5) + 's';
+      span.style.animationDuration = (Math.random() * 2 + 2) + 's';
+      container.appendChild(span);
+    }
+  }
+
+  /* ===== 2. MOBILE MENU HANDLERS ===== */
+  function openMobileMenu() {
+    document.getElementById('mobile-menu-overlay')?.classList.add('active');
+    document.getElementById('mobile-menu-drawer')?.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeMobileMenu() {
+    document.getElementById('mobile-menu-overlay')?.classList.remove('active');
+    document.getElementById('mobile-menu-drawer')?.classList.remove('active');
+    document.body.style.overflow = '';
+  }
+
+  /* ===== 3. SMOOTH NAVIGATION & ACTIVE SCROLLSPY ===== */
+  function scrollToTop() {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function bookAppointmentHelper(topic) {
+    const selector = document.getElementById('package-selector');
+    if (selector && topic) {
+      selector.value = topic;
+    }
+    const target = document.getElementById('appointment-concierge');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        const nameInput = document.getElementById('inquiry-name');
+        if (nameInput) {
+          nameInput.focus();
+          nameInput.classList.add('input-highlight');
+          setTimeout(() => nameInput.classList.remove('input-highlight'), 3000);
+        }
+      }, 700);
+    }
+  }
+
+  function selectScheme(packageName) {
+    const selector = document.getElementById('package-selector');
+    if (selector) {
+      selector.value = packageName;
+    }
+    showToast(`✦ Selected: ${packageName}. Fill your details below.`, 'stars');
+    const target = document.getElementById('appointment-concierge');
+    if (target) {
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      setTimeout(() => {
+        if (selector) {
+          selector.classList.add('input-highlight');
+          setTimeout(() => selector.classList.remove('input-highlight'), 3000);
+        }
+      }, 700);
+    }
+  }
+
+  function scrollToCalculator() {
+    const calc = document.getElementById('scheme-calculator-card');
+    if (calc) {
+      calc.scrollIntoView({ behavior: 'smooth', block: 'center' });
+      calc.classList.add('input-highlight');
+      setTimeout(() => calc.classList.remove('input-highlight'), 2000);
+    }
+  }
+
+  /* ===== 4. INTERACTIVE SCHEME CALCULATOR ===== */
+  let currentCalcAmount = 11000;
+
+  function updateCalculator(amount) {
+    currentCalcAmount = parseInt(amount, 10) || 11000;
+    const bonus = Math.round(currentCalcAmount * 0.5);
+    const totalPower = currentCalcAmount + bonus;
+    // Assume 22K gold rate = ₹7,050/g
+    const grams = (totalPower / 7050).toFixed(2);
+
+    const depositDisp = document.getElementById('calc-deposit-display');
+    const userDep = document.getElementById('calc-user-deposit');
+    const bonusCpn = document.getElementById('calc-bonus-coupon');
+    const totalPwr = document.getElementById('calc-total-power');
+    const goldGrams = document.getElementById('calc-gold-grams');
+    const slider = document.getElementById('calc-range-slider');
+
+    if (depositDisp) depositDisp.innerText = '₹' + currentCalcAmount.toLocaleString('en-IN');
+    if (userDep) userDep.innerText = '₹' + currentCalcAmount.toLocaleString('en-IN');
+    if (bonusCpn) bonusCpn.innerText = '+ ₹' + bonus.toLocaleString('en-IN');
+    if (totalPwr) totalPwr.innerText = '₹' + totalPower.toLocaleString('en-IN');
+    if (goldGrams) goldGrams.innerText = `≈ ${grams}g 22K Gold Equivalent`;
+    if (slider) slider.value = currentCalcAmount;
+  }
+
+  function setCalcAmount(amount) {
+    updateCalculator(amount);
+    const buttons = document.querySelectorAll('.calc-preset-btn');
+    buttons.forEach(btn => {
+      if (btn.innerText.includes(amount.toLocaleString('en-IN'))) {
+        btn.classList.add('border-secondary', 'text-secondary', 'bg-secondary/10');
+        btn.classList.remove('border-outline-variant', 'text-on-surface');
+      } else {
+        btn.classList.remove('border-secondary', 'text-secondary', 'bg-secondary/10');
+        btn.classList.add('border-outline-variant', 'text-on-surface');
+      }
+    });
+  }
+
+  function onCalcSliderChange(val) {
+    updateCalculator(val);
+    const buttons = document.querySelectorAll('.calc-preset-btn');
+    buttons.forEach(btn => {
+      btn.classList.remove('border-secondary', 'text-secondary', 'bg-secondary/10');
+      btn.classList.add('border-outline-variant', 'text-on-surface');
+    });
+  }
+
+  function lockCalculatedScheme() {
+    let packageName = 'Package 1 - ₹11,000';
+    if (currentCalcAmount >= 110000) packageName = 'Package 4 - ₹1,10,000';
+    else if (currentCalcAmount >= 55000) packageName = 'Package 3 - ₹55,000';
+    else if (currentCalcAmount >= 22000) packageName = 'Package 2 - ₹22,000';
+
+    selectScheme(packageName);
+    showToast(`✦ Locked ${packageName} (Deposit: ₹${currentCalcAmount.toLocaleString('en-IN')})`, 'check_circle');
+  }
+
+  /* ===== 5. CLIENT PORTAL & SAVINGS ACCOUNT MODAL ===== */
+  function openPortalModal() {
+    const modal = document.getElementById('portal-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closePortalModal(event) {
+    if (event && event.target && event.target.id !== 'portal-modal' && !event.target.closest('button')) {
+      return;
+    }
+    const modal = document.getElementById('portal-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function switchPortalTab(tab) {
+    const loginView = document.getElementById('portal-view-login');
+    const schemeView = document.getElementById('portal-view-scheme');
+    const tabLogin = document.getElementById('portal-tab-login');
+    const tabScheme = document.getElementById('portal-tab-scheme');
+
+    if (tab === 'login') {
+      loginView?.classList.remove('hidden');
+      schemeView?.classList.add('hidden');
+      tabLogin?.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'font-bold');
+      tabLogin?.classList.remove('text-on-surface-variant');
+      tabScheme?.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'font-bold');
+      tabScheme?.classList.add('text-on-surface-variant');
+    } else {
+      loginView?.classList.add('hidden');
+      schemeView?.classList.remove('hidden');
+      tabScheme?.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'font-bold');
+      tabScheme?.classList.remove('text-on-surface-variant');
+      tabLogin?.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'font-bold');
+      tabLogin?.classList.add('text-on-surface-variant');
+    }
+  }
+
+  function handlePortalLogin() {
+    const input = document.getElementById('portal-login-input');
+    if (!input || !input.value.trim()) {
+      showToast('Please enter your mobile number or Member ID', 'error');
+      input?.focus();
+      return;
+    }
+    loadDemoPortalUser();
+  }
+
+  function loadDemoPortalUser() {
+    const card = document.getElementById('portal-account-card');
+    if (card) {
+      card.classList.remove('hidden');
+      showToast('✦ Authenticated. Showing Suvarna Sanchay Portfolio.', 'verified');
+    }
+  }
+
+  function searchSchemeAccount() {
+    const input = document.getElementById('scheme-search-input');
+    if (!input || !input.value.trim()) {
+      showToast('Please enter a Scheme Passbook number', 'error');
+      return;
+    }
+    loadDemoPortalUser();
+  }
+
+  /* ===== 6. COLLECTION QUICK VIEW MODAL ===== */
+  const COLLECTION_DATA = {
+    rings: {
+      title: 'Solitaire & Heritage Rings',
+      purity: '22K / 916 BIS & Certified Natural Solitaires',
+      price: 'From ₹15,000 to ₹1,45,000',
+      desc: 'Handcrafted engagement bands, traditional Navratna signets, and precision-set diamond solitaire rings with museum-grade brilliance.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAbhboGsDKLihW1mqpJMAnFF_W3lCWQjgkRNReSA7LDBf-CBDLsVLwK-BLPwgjVNIBTxQnRGtR_GQj35CKvOgnBt77Bwk69JsEz_liDl5cLyFrqGxleP96fNhE1I-xMSR-2l1rIxEckZ8T3C_b4a4I05POPYKSSXsBYJBo7SPDL6otOlS7j0VmF3p8ZMxDxPW_PGHFvocySDHUJ7aO1za8qiqP6hPbEMF9bdROvQg61',
+      category: 'Rings & Solitaires'
+    },
+    necklaces: {
+      title: 'Royal Heritage Necklaces & Chokers',
+      purity: '22K / 916 BIS Hallmarked Yellow Gold',
+      price: 'From ₹85,000 to ₹6,50,000',
+      desc: 'Ornate filigree chokers, temple necklaces, and majestic bridal haars crafted with antique patina and unmatched precision.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDr09t05mvxqm8KgLhON_5izogU3DXxQwOgSGvHMI7IiaT8jimdMCleyzaYJsSLHtKj_ohJjFZRKtWWyHVmJwfd5UQzM9wkeDejV3AhmWTovTnxYiU1t3LssbREREf1FafvIaslH7k71nORAeGpDQtNLliM0s0Mjw1anuCjlo_WKRtykgYZSJf-eQRlWAhWw_fuLT_pawMIP4DWoE7TXxK0GPGEz_UnA-Vktziddtz2',
+      category: 'Royal Necklaces'
+    },
+    earrings: {
+      title: 'Heirloom Jhumkas & Chandbalis',
+      purity: '22K / 916 BIS Hallmarked',
+      price: 'From ₹25,000 to ₹1,80,000',
+      desc: 'Intricate drop jhumkas, modern daily hoops, and royal polki chandeliers created with genuine South Sea pearls and pure gold tassels.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBBOQL_BMC4iyUKu1IFLVqcYaCwZdfxrhFfWIbVeZqN8AmU3TXuOoQwnRwOEEHMSwg7G59fYa40GDk29jnKVXmGhs06FvpT7GYItQ_Y66qAFACRd77lTy7c5arwRQ3bSXwKBMgvY96FDgRvfEps66uHe4FUVKeHZL2PgsZq6X-S7sXEIxmmR3e0WSSDgSVcTW7cZQMkBOH_d47iVdsfNdEQ1acDbp7EsBtruxtrJkZh',
+      category: 'Heritage Earrings'
+    },
+    bangles: {
+      title: 'Solid Gold Bangles & Kadas',
+      purity: '22K / 916 BIS Hallmarked (Hallmark Laser Inscribed)',
+      price: 'From ₹45,000 to ₹3,20,000',
+      desc: 'Heavy solid embossed kadas, modern daily slip-ons, and traditional pachheli bangles built with everlasting structural integrity.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuBdoKE-ZXKsuyuVpUWl8JexZIJrUpAWIF5I-cYYlfucUSSiVQIXOxG6h_Yc3rWD3PVZAQeF6wc6cBJhGBbizEeCaIr_aS1Sk9XuT5Ow285PwRnews3HwBfeAPk7VMYIZFV0NBeRzZTyzLJvt8s2pi1Q1CJ9SVBAHeqQhl9dBCy7IUs5iBOVXMoTQBHYWt8o_fKb258CCDEZf8U8tTVQ5nJwvTeNC9fhZ8VwUqKlUGH7',
+      category: 'Bangles & Kadas'
+    },
+    bridal: {
+      title: 'The Royal Bridal Heritage Vault',
+      purity: '22K BIS 916 Gold & Uncut Natural Gemstones',
+      price: 'Custom Atelier Trousseau from ₹2,50,000+',
+      desc: 'A complete heirloom bridal ensemble encompassing choker, long haar, maang tikka, nath, hathphool, and matching bespoke earrings.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDCKtpVwCDhtToX46qlRNZCpQ2MT8a3K8MStvOsfSxPiTu1GaGxflYr4ILx1dDh_Na8xxKPAtqH0UOOdR6QFFD_D-dpGGcj5A8_s6I1FCburyETSsslotZDd9_9o7RkLdb3Zxr40QcKfxTyp2cGwmxn--oNx2XyuVpiZW7JEwsFx8UsYt8IiWxha8iWehXD8rSeIvwGdU6uY31TfZUM9EGYCbqXxwsKnG8Eo27KW_aM',
+      category: 'Bridal Custom Atelier'
+    },
+    bullion: {
+      title: '999.9 Fine Investment Bullion',
+      purity: '999.9 Pure 24K Minted Gold & 999 Silver',
+      price: 'Live Bullion Market Rates (From 1g to 100g Ingots)',
+      desc: 'Government recognized, tamper-evident packaged minted gold coins and investment silver bars. Zero making charge deduction on buybacks.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCPpDbC83bIWV7S0-jsqmxXr95cCg9dLeBfXTyT5yIaDfgSahLenHajPariaKtHbVO0gZ3iPMUTbdDHXAgIabI1my7a5HEQ2Hg6o1RorrVmQMkSzeN6kRjEC5F9wzkS8ZG43mZM3qE9aicKxUvXwB7l4e84GIRrjoABudIkUPHtMcTbO0_8wH1Nrn3TVnosznEdopSs1Iyg7x-cMZH1KM4IvEpnxiYjJirLPCWeIM9X',
+      category: 'General Consultation'
+    },
+    heirlooms: {
+      title: 'Modern Heirlooms Line',
+      purity: '22K BIS Hallmarked',
+      price: 'Custom Commission Range',
+      desc: 'Timeless architectural pieces that bridge generational heritage with understated modern luxury aesthetics.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuCay9NN6G2Yg8gV7t6WbAcQ7aJ15dtNncePy-5RJ-XfbOnsyoq9wVvKM3mP7pamqA0jQHh8FXwT1EUsQ0uKIbJOCy8CIZ4GVZLutNstMhTWxoFYHzgvZzXOvm967zHLZNjTi3Ye0JDRpF1O2u-ljtUburoRb7MIvNFa9NlSasthdjOC13uyAOcFlt-ya9vO8rtbtm6adXAGV8JvVxznNKnxb6s3ov145rUz-2fDUWV_',
+      category: 'General Consultation'
+    },
+    gemstones: {
+      title: 'Color of Elegance — Precious Gemstones',
+      purity: '18K & 22K Gold with Certified Natural Stones',
+      price: 'Custom Gemological Appraisals',
+      desc: 'Certified natural Colombian emeralds, Burmese rubies, and untreated navratna treasures set in high karat gold.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDl_-xtLkuIMxA6cgiJ_jboL590Iror4fgvIrQCXOl0qO7SLUmEePgcHgGIx0tGyujxAAumCF7Z2Aump20D_pli_E1DqsdXDDdW8yrATQySpCsbU1ZK6zBNgV7gMxvi0Kt1vzQab_1tywLHrMOTpy1liF-I8YnNd8wpXgTPA_ezEK-CCXY_YtqtAGZ3peSWbt5BkVKyvkc_-1DLPPMvS9Ya5m-JMAQ1pUhDKYMlUlZ2',
+      category: 'General Consultation'
+    },
+    daily: {
+      title: 'Everyday Essentials — Lightweight Radiance',
+      purity: '18K & 22K Hallmarked Gold',
+      price: 'From ₹12,000 to ₹65,000',
+      desc: 'Minimalist gold chains, delicate tennis bracelets, and contemporary geometric daily rings crafted for effortless everyday comfort.',
+      img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDEk0n26nxdzuS7MOI8eMn1DYVLKw-sGRVHsOj9p8kt1z0rdpv6faSO2gLLwLg1aa07qDO2Jsa6M-92GeLoeDIHFafxJXv-4KYxZQy2Njpc5-ksZnGKDu8X0-4nlT28P-7_ijxrzRxyJNqBaP07uaarfCws6LTdp2PmnCAMh-c7eJ9ZIO-Y-N3EtfTeF8_dcGxKSikh-GvPYf3UBAK0O_OVgmeLqEbiFPFIz-IjG1vq',
+      category: 'General Consultation'
+    }
+  };
+
+  let activeModalCategory = 'General Consultation';
+
+  function openCollectionModal(key) {
+    const data = COLLECTION_DATA[key] || COLLECTION_DATA['rings'];
+    activeModalCategory = data.category || 'General Consultation';
+
+    const modal = document.getElementById('collection-modal');
+    const title = document.getElementById('col-modal-title');
+    const purity = document.getElementById('col-modal-purity');
+    const price = document.getElementById('col-modal-price');
+    const desc = document.getElementById('col-modal-desc');
+    const img = document.getElementById('col-modal-img');
+
+    if (title) title.innerText = data.title;
+    if (purity) purity.innerText = data.purity;
+    if (price) price.innerText = data.price;
+    if (desc) desc.innerText = data.desc;
+    if (img) {
+      img.src = data.img;
+      img.alt = data.title;
+    }
+
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+    }
+  }
+
+  function closeCollectionModal(event) {
+    if (event && event.target && event.target.id !== 'collection-modal' && !event.target.closest('button')) {
+      return;
+    }
+    const modal = document.getElementById('collection-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function inquireFromModal() {
+    closeCollectionModal();
+    bookAppointmentHelper(activeModalCategory);
+    showToast(`✦ Inquiring about ${activeModalCategory}`, 'diamond');
+  }
+
+  /* ===== 7. POLICY & LEGAL MODAL ===== */
+  const POLICY_TEXTS = {
+    purity: `
+      <h4 class="font-headline-sm text-base text-on-surface font-semibold">100% BIS Hallmarked Purity Guarantee</h4>
+      <p>Every piece of gold jewellery crafted by Suvarna Kala Jewellers Pvt Ltd bears official Bureau of Indian Standards (BIS) hallmarking, including the 6-digit HUID (Hallmark Unique Identification Number).</p>
+      <p>Customers can verify purity independently on the BIS Care App using the laser-inscribed HUID number on their jewelry receipt.</p>
+      <p class="font-semibold text-secondary">Our Triple Purity Assurance:</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>22-Karat jewellery is certified at 916 parts per thousand purity standard.</li>
+        <li>Minted bullion coins carry 999.9 ultra-pure fine gold assay certification.</li>
+        <li>Sterling silver articles carry 925 / 999 purity assurance marks.</li>
+      </ul>
+    `,
+    bullion: `
+      <h4 class="font-headline-sm text-base text-on-surface font-semibold">Bullion &amp; Lifetime Buyback Policy</h4>
+      <p>We provide complete transparency on prevailing daily market bullion rates. Gold rates are updated continuously in accordance with Indian Bullion and Jewellers Association (IBJA) standards.</p>
+      <p class="font-semibold text-secondary">Exchange &amp; Buyback Terms:</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>100% net gold value given against current daily market rates for SK Jewellers hallmarked pieces.</li>
+        <li>Zero deduction on fine gold coin &amp; bar exchanges against new jewellery purchases.</li>
+        <li>Pan-India courier delivery is 100% insured against loss or transit hazards.</li>
+      </ul>
+    `,
+    privacy: `
+      <h4 class="font-headline-sm text-base text-on-surface font-semibold">Client Discretion &amp; Privacy Protocol</h4>
+      <p>As custodians of our clients' heirloom commissions and gold schemes, we hold privacy to the highest standard.</p>
+      <ul class="list-disc pl-5 space-y-1">
+        <li>Contact numbers and appointment details are never shared with third-party advertisers.</li>
+        <li>Your investment scheme passbook data is encrypted and confidential.</li>
+        <li>Private salon consultations are scheduled discreetly at the Morena Atelier.</li>
+      </ul>
+    `
+  };
+
+  function openPolicyModal(tab) {
+    const modal = document.getElementById('policy-modal');
+    if (modal) {
+      modal.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      switchPolicyTab(tab || 'purity');
+    }
+  }
+
+  function closePolicyModal(event) {
+    if (event && event.target && event.target.id !== 'policy-modal' && !event.target.closest('button')) {
+      return;
+    }
+    const modal = document.getElementById('policy-modal');
+    if (modal) {
+      modal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  }
+
+  function switchPolicyTab(tab) {
+    const container = document.getElementById('policy-content');
+    if (container) {
+      container.innerHTML = POLICY_TEXTS[tab] || POLICY_TEXTS.purity;
+    }
+    ['purity', 'bullion', 'privacy'].forEach(t => {
+      const btn = document.getElementById('policy-tab-' + t);
+      if (t === tab) {
+        btn?.classList.add('text-secondary', 'border-b-2', 'border-secondary', 'font-bold');
+        btn?.classList.remove('text-on-surface-variant');
+      } else {
+        btn?.classList.remove('text-secondary', 'border-b-2', 'border-secondary', 'font-bold');
+        btn?.classList.add('text-on-surface-variant');
+      }
+    });
+  }
+
+  /* ===== 8. FORM SUBMISSIONS & TOASTS ===== */
+  function submitEnquiryForm(event) {
+    event.preventDefault();
+    const btn = document.getElementById('inquiry-submit-btn');
+    const name = document.getElementById('inquiry-name')?.value || 'Client';
+    const pkg = document.getElementById('package-selector')?.value || 'General Atelier Consultation';
+
+    if (btn) {
+      btn.disabled = true;
+      btn.innerHTML = `<span class="material-symbols-outlined text-[16px] animate-spin">progress_activity</span><span>Submitting...</span>`;
+    }
+
+    setTimeout(() => {
+      if (btn) {
+        btn.disabled = false;
+        btn.innerHTML = `<span>Send Enquiry</span><span class="material-symbols-outlined text-[16px]">send</span>`;
+      }
+
+      const randomTicket = 'SK-' + (new Date().getFullYear()) + '-' + Math.floor(1000 + Math.random() * 9000);
+      const ticketId = document.getElementById('enquiry-ticket-id');
+      const confirmText = document.getElementById('enquiry-confirmation-text');
+      const confirmBanner = document.getElementById('enquiry-confirmation');
+
+      if (ticketId) ticketId.innerText = 'Consultation Ref: ' + randomTicket;
+      if (confirmText) {
+        confirmText.innerText = `✦ Thank you, ${name}. Your inquiry regarding "${pkg}" has been recorded. Our private concierge will call you within 4 hours.`;
+      }
+      if (confirmBanner) {
+        confirmBanner.classList.remove('hidden');
+      }
+
+      showToast(`✦ Thank you ${name}! Consultation #${randomTicket} received.`, 'verified');
+
+      // Clear input fields
+      const form = document.getElementById('sk-inquiry-form');
+      if (form) form.reset();
+    }, 900);
+  }
+
+  function submitNewsletter(event) {
+    event.preventDefault();
+    const emailInput = document.getElementById('newsletter-email');
+    if (!emailInput || !emailInput.value.trim()) return;
+
+    showToast('✦ Subscribed! Welcome to the SK Jewellers private circle.', 'mail');
+    emailInput.value = '';
+  }
+
+  function showToast(message, icon) {
+    const container = document.getElementById('toast-container');
+    if (!container) return;
+
+    const toast = document.createElement('div');
+    toast.className = 'sk-toast';
+    toast.innerHTML = `
+      <span class="material-symbols-outlined text-secondary text-[20px]">${icon || 'stars'}</span>
+      <span>${message}</span>
+    `;
+
+    container.appendChild(toast);
+
+    setTimeout(() => {
+      toast.classList.add('toast-out');
+      setTimeout(() => toast.remove(), 400);
+    }, 4500);
+  }
+
+  /* ===== 9. SCROLL LISTENERS & INTERSECTION OBSERVER ===== */
+  window.addEventListener('scroll', () => {
+    const scrolled = window.scrollY > 40;
+    const header = document.querySelector('header');
+    if (header) {
+      if (scrolled) header.classList.add('scrolled');
+      else header.classList.remove('scrolled');
+    }
+
+    const backToTop = document.getElementById('back-to-top');
+    if (backToTop) {
+      if (window.scrollY > 400) backToTop.classList.add('visible');
+      else backToTop.classList.remove('visible');
+    }
+  }, { passive: true });
+
+  // Escape key closes modals or curtain
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      if (!curtainOpened) openCurtain();
+      closeMobileMenu();
+      closePortalModal();
+      closeCollectionModal();
+      closePolicyModal();
+    }
+  });
+
+  // Intersection observer for scroll animations & scrollspy
+  function initApp() {
+    initCurtainIntro();
+    updateCalculator(11000);
+
+    // Scroll reveal observer
+    const revealElements = document.querySelectorAll('.scroll-reveal, .scroll-reveal-left, .scroll-reveal-right');
+    if ('IntersectionObserver' in window) {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('revealed');
+          }
+        });
+      }, { threshold: 0.12 });
+
+      revealElements.forEach(el => observer.observe(el));
+
+      // Nav scrollspy
+      const sections = document.querySelectorAll('section[id]');
+      const navLinks = document.querySelectorAll('.desktop-nav-link');
+
+      const spyObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            const id = entry.target.getAttribute('id');
+            navLinks.forEach(link => {
+              if (link.getAttribute('href') === '#' + id) {
+                link.classList.add('nav-active');
+              } else {
+                link.classList.remove('nav-active');
+              }
+            });
+          }
+        });
+      }, { threshold: 0.3 });
+
+      sections.forEach(s => spyObserver.observe(s));
+    } else {
+      revealElements.forEach(el => el.classList.add('revealed'));
+    }
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initApp);
+  } else {
+    initApp();
+  }
+</script>
+</body></html>
